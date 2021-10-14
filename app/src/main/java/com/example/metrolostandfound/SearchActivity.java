@@ -1,14 +1,12 @@
 package com.example.metrolostandfound;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class SearchActivity extends AppCompatActivity {
     @Override
@@ -20,7 +18,13 @@ public class SearchActivity extends AppCompatActivity {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "검색", Toast.LENGTH_SHORT).show();
+                //테스트하려고 추가했었던 부분
+                //Toast.makeText(getApplicationContext(), "검색", Toast.LENGTH_SHORT).show();
+
+                //결과창으로 이동
+                Intent intent = new Intent(getApplicationContext(), SearchResultActivity.class);
+                startActivity(intent);
+                onStop();
             }
         });
     }
