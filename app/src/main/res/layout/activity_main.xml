@@ -26,5 +26,13 @@
             android:textColor="@color/white"
             android:id="@+id/btnGoSearch"
             android:layout_margin="5dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_background"
+            android:text="분실물 등록"
+            android:textColor="@color/white"
+            android:id="@+id/btnGoEnroll"
+            android:layout_margin="5dp"/>
     </LinearLayout>
 </LinearLayout>

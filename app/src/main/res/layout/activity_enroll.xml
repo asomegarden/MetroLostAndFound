@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="검색"
+        android:text="등록"
         android:textSize="30dp"
         android:background="@drawable/round_background"
         android:textColor="@color/white"
@@ -36,9 +36,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="분류 : "
             android:textColor="@color/black"
-            android:layout_marginTop="10dp"
             android:textSize="15dp"
             android:layout_below="@+id/editName"
             android:id="@+id/textCategory"/>
@@ -48,8 +48,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/textCategory"
+            android:id="@+id/rdoCategory"
             android:checkedButton="@id/rdoAll"
+            android:layout_toRightOf="@+id/textCategory"
             android:layout_below="@+id/editName">
 
             <RadioButton
@@ -71,13 +72,34 @@
                 android:text="가방 "/>
         </RadioGroup>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="추가 설명"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:id="@+id/textMemo"
+            android:layout_below="@+id/rdoCategory"/>
+
+        <EditText
+            android:id="@+id/editMemo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/textMemo"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            android:hint="선택사항"
+            android:background="@drawable/round_edit_text_background"
+            android:padding="10dp"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_alignParentBottom="true"
-            android:id="@+id/btnSearch"
-            android:text="검색"/>
+            android:id="@+id/btnEnroll"
+            android:text="등록"/>
     </RelativeLayout>
 
 </LinearLayout>

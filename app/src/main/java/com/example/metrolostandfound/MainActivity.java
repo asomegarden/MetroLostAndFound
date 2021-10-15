@@ -18,11 +18,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btnGoSearch = (Button) findViewById(R.id.btnGoSearch);
+        Button btnGoEnroll = (Button) findViewById(R.id.btnGoEnroll);
 
         btnGoSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                startActivity(intent);
+                onStop();
+            }
+        });
+
+        btnGoEnroll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
                 startActivity(intent);
                 onStop();
             }
