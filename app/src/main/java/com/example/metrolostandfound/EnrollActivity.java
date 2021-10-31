@@ -29,6 +29,14 @@ public class EnrollActivity extends AppCompatActivity {
 
                 editName.setText("");
                 editMemo.setText("");
+                
+                //LostObject newObj = new LostObject();
+                //newObj.setItem_id("");
+                
+                //이렇게 계속 추가해서 데이터 다 입력하면
+                //DBController.postItem(obj);
+                //하면 됨
+                //static으로 만들어서 인스턴스 생성 안 해도 됨
             }
         });
     }

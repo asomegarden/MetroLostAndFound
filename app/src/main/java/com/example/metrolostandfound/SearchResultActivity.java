@@ -32,6 +32,9 @@ public class SearchResultActivity extends AppCompatActivity {
 
     //리스트 내용 불러오기 여기서 데이터 불러와서 추가하면 될듯 일단은 아무거나 넣음
     public void loadItem(){
+        //List<LostObject> objs = DBController.getItem();
+        //로 받아서 그 형식에 맞게 잘 넣어주면 됨
+
         //꼭 텍스트 말고 다른 것도 넣을 수 있음 일단은 테스트용으로 텍스트
         addItem("아이폰7", "스마트폰", "1호선 시청역");
         addItem("카시오 시계", "시계", "수인분당선 망포역");
