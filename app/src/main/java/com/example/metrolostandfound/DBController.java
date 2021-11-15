@@ -11,6 +11,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -30,6 +31,70 @@ public class DBController {
         RetrofitService service = retrofit.create(RetrofitService.class);
 
         Call<List<LostObject>> call = service.getItems();
+
+        call.enqueue((new Callback<List<LostObject>>() {
+            @Override
+            public void onResponse(Call<List<LostObject>> call, Response<List<LostObject>> response) {
+                if(response.isSuccessful()) {
+                    obj = response.body();
+                    Log.d("result", obj.toString());
+                }else {
+                    Log.d("get 에러", response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<LostObject>> call, Throwable t) {
+                Log.d("get 실패", "이유 : ");
+                t.printStackTrace();
+            }
+        }));
+
+        return obj;
+    }
+
+    //메인 카테고리로 검색
+    public static List<LostObject> getItems(String mc){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://34.64.198.240:1337/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        RetrofitService service = retrofit.create(RetrofitService.class);
+
+        Call<List<LostObject>> call = service.getItems(mc);
+
+        call.enqueue((new Callback<List<LostObject>>() {
+            @Override
+            public void onResponse(Call<List<LostObject>> call, Response<List<LostObject>> response) {
+                if(response.isSuccessful()) {
+                    obj = response.body();
+                    Log.d("result", obj.toString());
+                }else {
+                    Log.d("get 에러", response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<LostObject>> call, Throwable t) {
+                Log.d("get 실패", "이유 : ");
+                t.printStackTrace();
+            }
+        }));
+
+        return obj;
+    }
+
+    //메인 카테고리 + 서브 카테고리로 검색
+    public static List<LostObject> getItems(String mc, String sc){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://34.64.198.240:1337/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        RetrofitService service = retrofit.create(RetrofitService.class);
+
+        Call<List<LostObject>> call = service.getItems(mc, sc);
 
         call.enqueue((new Callback<List<LostObject>>() {
             @Override
@@ -79,24 +144,66 @@ public class DBController {
             }
         });
     }
+
+    //item 삭제
+    public static void deleteItem(int id){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://34.64.198.240:1337/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        RetrofitService service = retrofit.create(RetrofitService.class);
+
+        Call call = service.deletePost(id);
+
+        call.enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) {
+                if(!response.isSuccessful()){
+                    Log.d("Post 오류", response.message());
+                    return;
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, Throwable t) {
+                Log.d("Post 실패", "이유 : ");
+                t.printStackTrace();
+            }
+        });
+    }
 }
 
 //API 메소드 사용을 위한 인터페이스 나중에 Query도 만들거임
 interface RetrofitService {
+    //전부 받아오기
     @GET("items")
     Call<List<LostObject>> getItems();
 
-    @GET("items/{item}")
-    Call<LostObject> getItems(@Path("item") String post);
-
+    //메인 카테고리로 검색
     @GET("items")
-    Call<List<LostObject>> getPosts(@Query("main_category") String mc);
-
+    Call<List<LostObject>> getItems(@Query("main_category") String mc);
+    
+    //메인 카테고리와 서브 카테고리로 검색
     @GET("items")
-    Call<List<LostObject>> getPosts(
+    Call<List<LostObject>> getItems(
             @Query("main_category") String mc,
             @Query("sub_category") String sc
     );
+
+    @GET("items")
+    Call<List<LostObject>> getPosts(@QueryMap Map<String,String> querys);
+
+    @POST("items")
+    Call<LostObject> postItem(@Body LostObject obj);
+
+    //삭제 id는 그 데이터 받아오면 getId 메소드로 가져올 수 있음 setId는 그래서 private임 사실 지워도 됐지만 그냥 냅둠
+    @DELETE("posts/{id}")
+    Call<Void> deletePost(@Path("id") int id);
+
+    //이건 아이디로 하나만 가져오는 건데 사실상 필요없음 그리고 메인 카테고리로 검색이랑 오버라이딩이 겹쳐서 안 쓸듯
+    //@GET("items/{item}")
+    //Call<LostObject> getItems(@Path("item") String post);
 
     /*
     Map<String, String> querys = new HashMap<>();
@@ -104,11 +211,7 @@ interface RetrofitService {
     querys.put("id", "96");
      */
 
-    @GET("items")
-    Call<List<LostObject>> getPosts(@QueryMap Map<String,String> querys);
 
-    @POST("items")
-    Call<LostObject> postItem(@Body LostObject obj);
 
     /*
     @FormUrlEncoded
@@ -125,10 +228,8 @@ interface RetrofitService {
 	@FieldMap Map<String, String> fieldMap
 );
      */
-/*
-    @DELETE("posts/{id}")
-    Call<Void> deletePost(@Path("id") int id);
 
- */
+    
 
+    
 }

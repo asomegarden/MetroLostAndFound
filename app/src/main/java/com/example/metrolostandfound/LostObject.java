@@ -72,7 +72,7 @@ public class LostObject
     }
 
     //이 밑의 항목들은 따로 지정해주지 않아도 DB에서 알아서 지정, 읽을 때만 있으면 됨
-    private String getId () { return id; }
+    public String getId () { return id; }
     private void setId (String id) { this.id = id; }
     private String getPublished_at () { return published_at; }
     private void setPublished_at (String published_at) { this.published_at = published_at; }
