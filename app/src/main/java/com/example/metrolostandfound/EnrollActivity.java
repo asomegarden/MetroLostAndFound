@@ -377,7 +377,7 @@ public class EnrollActivity extends AppCompatActivity {
 
     }
 
-    private  void initDateTime(){
+    private void initDateTime(){
         Calendar c = Calendar.getInstance();
         year = c.get(Calendar.YEAR);
         month = c.get(Calendar.MONTH) + 1;
