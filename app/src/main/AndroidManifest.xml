@@ -35,5 +35,6 @@
         <activity android:name=".SettingActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SearchDetailActivity" />
+        <activity android:name=".ProductDetailActivity" />
     </application>
 </manifest>
