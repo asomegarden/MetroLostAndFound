@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        //시간표 정보가 담긴 엑셀 시트 불러오기
+        readExcel();
 
         Button btnGoSearch = (Button) findViewById(R.id.btnGoSearch);
         Button btnGoEnroll = (Button) findViewById(R.id.btnGoEnroll);
@@ -94,6 +98,17 @@ public class MainActivity extends AppCompatActivity {
             editor.apply();
             ActivityCompat.finishAffinity(this);
             toast.cancel();
+        }
+    }
+
+    private void readExcel(){
+        //엑셀 불러오는 작업
+        try {
+            InputStream is = getBaseContext().getResources().getAssets().open("suinbundang_line.xls");
+            Schedule.readSuinbundangExcel(is);
+        }
+        catch (Exception e){
+            e.printStackTrace();
         }
     }
 }
