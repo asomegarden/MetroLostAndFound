@@ -3,49 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="등록"
-            android:textSize="30dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/round_background"
+            android:gravity="center"
+            android:text="등록"
             android:textColor="@color/white"
-            android:gravity="center"/>
+            android:textSize="30dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:text="발견일 : "
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:textStyle="bold"
-                android:textSize="20dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="  2021 - 12 - 01  "
-                android:layout_gravity="center"
-                android:textStyle="bold"
-                android:textSize="25dp"
-                android:layout_marginLeft="25dp"
-                android:background="@color/gray"
-                android:gravity="center"
-                android:id="@+id/enrollDateTextView"/>
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,65 +30,102 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="시간:"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="20dp"/>
+                android:text="발견일 : "
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/enrollDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="25dp"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:text="  2021 - 12 - 01  "
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="시간:"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:text="  PM  1 0  :  0  0  "
                 android:layout_gravity="center"
-                android:textStyle="bold"
-                android:textSize="25dp"
                 android:layout_marginLeft="25dp"
                 android:background="@color/gray"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="  PM  1 0  :  0  0  "
+                android:textSize="25dp"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="호선:"
                         android:layout_gravity="center"
                         android:layout_marginLeft="5dp"
                         android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="20dp"/>
+                        android:text="호선:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
                     <Spinner
+                        android:id="@+id/enrollLineSpinner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:layout_gravity="center"
-                        android:id="@+id/enrollLineSpinner"/>
+                        android:gravity="center" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="역:"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="20dp"/>
+                        android:text="역:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
                     <Spinner
+                        android:id="@+id/enrollStationSpinner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:layout_gravity="center"
-                        android:id="@+id/enrollStationSpinner"/>
+                        android:gravity="center" />
 
                 </LinearLayout>
+                <!--
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -135,41 +148,47 @@
                         android:id="@+id/enrollLocationSpinner"/>
 
                 </LinearLayout>
+                -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="대분류:"
                         android:layout_gravity="center"
                         android:layout_marginLeft="5dp"
                         android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="20dp"/>
+                        android:text="대분류:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
                     <Spinner
+                        android:id="@+id/bigProductSpinner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:layout_gravity="center"
-                        android:id="@+id/bigProductSpinner"/>
+                        android:gravity="center" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="소분류:"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="20dp"/>
+                        android:text="소분류:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
                     <Spinner
+                        android:id="@+id/smallProductSpinner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:layout_gravity="center"
-                        android:id="@+id/smallProductSpinner"/>
+                        android:gravity="center" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -178,18 +197,20 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="보관 위치:"
                         android:layout_gravity="center"
                         android:layout_marginLeft="5dp"
                         android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="20dp"/>
+                        android:text="보관 위치:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:hint="보관 장소를 입력해주세요."/>
+                        android:hint="보관 장소를 입력해주세요." />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -198,32 +219,36 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="추가 사항:"
                         android:layout_marginLeft="5dp"
                         android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="20dp"/>
+                        android:text="추가 사항:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
-                        android:hint="추가적인 사항을 작성해주세요."/>
+                        android:hint="추가적인 사항을 작성해주세요." />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="사진 :"
                         android:layout_gravity="center"
                         android:layout_marginLeft="5dp"
                         android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="20dp"/>
+                        android:text="사진 :"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -232,57 +257,55 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="비밀 번호:"
                         android:layout_gravity="center"
                         android:layout_marginLeft="5dp"
                         android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="20dp"/>
+                        android:text="비밀 번호:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:hint="비밀번호를 입력해주세요."/>
+                        android:hint="비밀번호를 입력해주세요." />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp">
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:text="등록"/>
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal">
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:text="초기화"
-                        android:id="@+id/resetEnrollButton"/>
+                        android:text="등록" />
+
+                    <Button
+                        android:id="@+id/resetEnrollButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="초기화" />
 
 
                 </LinearLayout>
 
 
             </LinearLayout>
+
             <CalendarView
+                android:id="@+id/enrollCalendarView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:visibility="invisible"
-                android:id="@+id/enrollCalendarView"/>
+                android:visibility="invisible" />
         </FrameLayout>
 
     </LinearLayout>
-
-
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"

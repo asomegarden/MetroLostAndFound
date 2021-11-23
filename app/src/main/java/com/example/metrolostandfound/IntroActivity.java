@@ -38,7 +38,7 @@ public class IntroActivity extends AppCompatActivity {
         //엑셀 불러오는 작업
         try {
             InputStream is = getBaseContext().getResources().getAssets().open("suinbundang_line.xls");
-            Schedule.readSuinbundangExcel(is);
+            MetroSchedule.readSuinbundangExcel(is);
         }
         catch (Exception e){
             e.printStackTrace();

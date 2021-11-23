@@ -6,24 +6,25 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.CalendarView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.time.Year;
+import java.util.ArrayList;
 
 public class EnrollActivity extends AppCompatActivity {
 
-    private ArrayAdapter adapter1, adapter2, adapter3, adapter4, adapter5;
-    private Spinner spinner1, spinner2, spinner3, spinner4, spinner5;
-    private String choise_line = "";
-    private String choise_station ="";
-    private String choise_location = "";
+    private ArrayAdapter adapterLine, adapterStation, adapterBig, adapterSmall;
+    private Spinner spinnerLine, spinnerStation, spinnerBig, spinnerSmall;
+    private String choice_line = "";
+    private String choice_station ="";
+    private String choice_big;
+    private String choice_small;
+
+    //private String choice_location = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,32 +40,34 @@ public class EnrollActivity extends AppCompatActivity {
 
         CalendarView enrollCalendarView = (CalendarView) findViewById(R.id.enrollCalendarView);
 
-        spinner1 = (Spinner) findViewById(R.id.enrollLineSpinner);
-        spinner2 = (Spinner) findViewById(R.id.enrollStationSpinner);
-        spinner3 = (Spinner) findViewById(R.id.enrollLocationSpinner);
-        spinner4 = (Spinner) findViewById(R.id.bigProductSpinner);
-        spinner5 = (Spinner) findViewById(R.id.smallProductSpinner);
+        spinnerLine = (Spinner) findViewById(R.id.enrollLineSpinner);
+        spinnerStation = (Spinner) findViewById(R.id.enrollStationSpinner);
+        //spinner = (Spinner) findViewById(R.id.enrollLocationSpinner);
+        spinnerBig = (Spinner) findViewById(R.id.bigProductSpinner);
+        spinnerSmall = (Spinner) findViewById(R.id.smallProductSpinner);
 
-        adapter1 = ArrayAdapter.createFromResource(this, R.array.lineArray, android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter1);
-        adapter2 = ArrayAdapter.createFromResource(this, R.array.stationArray, android.R.layout.simple_spinner_dropdown_item);
-        spinner2.setAdapter(adapter2);
-        adapter3 = ArrayAdapter.createFromResource(this, R.array.locationArray, android.R.layout.simple_spinner_dropdown_item);
-        spinner3.setAdapter(adapter3);
+        ArrayList<String> defaultList = new ArrayList<>();
+        defaultList.add("전체");
 
-        adapter4 = ArrayAdapter.createFromResource(this, R.array.bigProductArray, android.R.layout.simple_spinner_dropdown_item);
-        spinner4.setAdapter(adapter4);
-        adapter5 = ArrayAdapter.createFromResource(this, R.array.allSmallProductArray, android.R.layout.simple_spinner_dropdown_item);
-        spinner5.setAdapter(adapter5);
+        adapterLine =  ArrayAdapter.createFromResource(this, R.array.lineArray, android.R.layout.simple_spinner_dropdown_item);
+        adapterStation = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, defaultList);
+        adapterBig = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, ObjectCategory.getMainCategories());
+        adapterLine = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, defaultList);
 
-        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinnerLine.setAdapter(adapterLine);
+        spinnerStation.setAdapter(adapterStation);
+        spinnerBig.setAdapter(adapterBig);
+        spinnerSmall.setAdapter(adapterSmall);
+
+        spinnerLine.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(adapter1.getItem(position).equals("수인분당선")){
-                    choise_line = "수인분당선";
-                    adapter2 = ArrayAdapter.createFromResource(EnrollActivity.this, R.array.suin_bundangStationArray, android.R.layout.simple_spinner_dropdown_item);
-                    adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spinner2.setAdapter(adapter2);
+                choice_line = adapterLine.getItem(position).toString();
+                if(choice_line.equals("수인분당선")){
+
+                    adapterStation = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, MetroSchedule.getSuinbundangStationList());
+                    adapterStation.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinnerStation.setAdapter(adapterStation);
                 }
             }
 
@@ -74,10 +77,10 @@ public class EnrollActivity extends AppCompatActivity {
             }
         });
 
-        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinnerStation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                choise_station = adapter2.getItem(position).toString();
+                choice_station = adapterStation.getItem(position).toString();
             }
 
             @Override
@@ -86,10 +89,11 @@ public class EnrollActivity extends AppCompatActivity {
             }
         });
 
+        /*
         spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                choise_location = adapter3.getItem(position).toString();
+                choice_location = adapter3.getItem(position).toString();
             }
 
             @Override
@@ -97,19 +101,15 @@ public class EnrollActivity extends AppCompatActivity {
 
             }
         });
+        */
 
-        spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinnerBig.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (adapter1.getItem(position).equals("가방")) {
-                    adapter5 = ArrayAdapter.createFromResource(EnrollActivity.this, R.array.bagSmallProductArray, android.R.layout.simple_spinner_dropdown_item);
-                    adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spinner5.setAdapter(adapter5);
-                } else if (adapter1.getItem(position).equals("귀금속")) {
-                    adapter5 = ArrayAdapter.createFromResource(EnrollActivity.this, R.array.jewelSmallProductArray, android.R.layout.simple_spinner_dropdown_item);
-                    adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    spinner5.setAdapter(adapter5);
-                }
+                choice_big = adapterBig.getItem(position).toString();
+                adapterSmall = new ArrayAdapter(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ObjectCategory.getSubCategories(choice_big));
+                adapterSmall.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnerSmall.setAdapter(adapterSmall);
             }
 
             @Override
@@ -140,6 +140,8 @@ public class EnrollActivity extends AppCompatActivity {
                 enrollCalendarView.setVisibility(View.VISIBLE);
             }
         });
+
+
 /*
 
         Button btnEnroll = (Button) findViewById(R.id.btnEnroll);

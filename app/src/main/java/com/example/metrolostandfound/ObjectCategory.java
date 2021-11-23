@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Category {
+public class ObjectCategory {
     private static List<String> mainCategories;
     private static Map<String, List<String>> categories;
 

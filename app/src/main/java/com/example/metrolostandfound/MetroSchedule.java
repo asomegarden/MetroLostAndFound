@@ -4,6 +4,7 @@ import android.util.Log;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,11 +13,14 @@ import java.util.Set;
 import jxl.Sheet;
 import jxl.Workbook;
 
-public class Schedule {
+public class MetroSchedule {
     private static Map<String, Map<String, List<String>>> suinbundang;
+    private static List<String> lines;
+
     //역 이름 별로 출발시간 리스트와 도착시간 리스트 가 있는 구조
     static{
         suinbundang = new HashMap<String, Map<String, List<String>>>();
+        lines = Arrays.asList(new String[]{"수인분당선"});
     }
     
     //역별로 따로 함수를 만들어뒀음 이게 좋을지는 모르겠는데 뭔가 이게 나을듯
@@ -74,6 +78,7 @@ public class Schedule {
             e.printStackTrace();
         }
     }
+    public static List<String> getLines(){return lines;}
 
     public static List<String> getSuinbundangArrivalTimes(String station){
         return suinbundang.get(station).get("도착시간");
