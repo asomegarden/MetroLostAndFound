@@ -1,3 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="lineArray">
+        <item>1호선</item>
+        <item>2호선</item>
+        <item>3호선</item>
+        <item>4호선</item>
+        <item>5호선</item>
+        <item>6호선</item>
+        <item>7호선</item>
+        <item>수인분당선</item>
+    </string-array>
+
+    <string-array name="suin_bundangStationArray">
+        <item>전체</item>
+        <item>수원역</item>
+    </string-array>
+
+    <string-array name="locationArray">
+        <item>1-1</item>
+        <item>1-2</item>
+        <item>1-3</item>
+        <item>1-4</item>
+
+    </string-array>
+
 </resources>

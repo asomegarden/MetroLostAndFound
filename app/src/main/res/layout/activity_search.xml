@@ -1,83 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="검색"
-        android:textSize="30dp"
-        android:background="@drawable/round_background"
-        android:textColor="@color/white"
-        android:gravity="center"/>
+    android:orientation="vertical">
 
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp">
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background"
+        android:id="@+id/searchLinearLayout"
+        >
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="이름 : "
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:id="@+id/textName"/>
-        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/textName"
-            android:id="@+id/editName"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="분류 : "
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-            android:textSize="15dp"
-            android:layout_below="@+id/editName"
-            android:id="@+id/textCategory"/>
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/textCategory"
-            android:checkedButton="@id/rdoAll"
-            android:layout_below="@+id/editName">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/rdoAll"
-                android:text="모두 "/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="스마트폰 "/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="지갑 "/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="가방 "/>
-        </RadioGroup>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:text="검색"
+            android:textSize="45dp"
+            android:textColor="@color/white"
             android:gravity="center"
-            android:layout_alignParentBottom="true"
-            android:id="@+id/btnSearch"
-            android:text="검색"/>
+            android:layout_alignParentTop="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_baseline_search_24"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/searchImageView"
+            />
+
     </RelativeLayout>
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_below="@id/searchLinearLayout">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lostItemListView"
+            android:dividerHeight="10dp"
+            android:divider="@color/korailBlue"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@color/korailBlue"
+            android:drawableTop="@drawable/ic_baseline_home_24"
+            android:text="HOME"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/searchHomeTextView"
+            />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@color/korailBlue"
+            android:drawableTop="@drawable/ic_baseline_add_24"
+            android:text="등록"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/searchAddTextView"
+            />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@color/darkkorailBlue"
+            android:drawableTop="@drawable/ic_baseline_search_24"
+            android:text="찾기"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/searchSearchTextView"
+            />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@color/korailBlue"
+            android:drawableTop="@drawable/ic_baseline_settings_24"
+            android:text="환경설정"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/searchSettingTextView"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

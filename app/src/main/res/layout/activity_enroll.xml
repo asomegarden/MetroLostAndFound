@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
@@ -15,91 +15,59 @@
         android:textColor="@color/white"
         android:gravity="center"/>
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_height="match_parent"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp">
-
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="이름 : "
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:id="@+id/textName"/>
-        <EditText
+            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/textName"
-            android:id="@+id/editName"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="분류 : "
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:layout_below="@+id/editName"
-            android:id="@+id/textCategory"/>
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:id="@+id/rdoCategory"
-            android:checkedButton="@id/rdoAll"
-            android:layout_toRightOf="@+id/textCategory"
-            android:layout_below="@+id/editName">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/rdoAll"
-                android:text="모두 "/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="스마트폰 "/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="지갑 "/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="가방 "/>
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="추가 설명"
-            android:layout_marginTop="10dp"
-            android:textSize="15dp"
-            android:textColor="@color/black"
-            android:id="@+id/textMemo"
-            android:layout_below="@+id/rdoCategory"/>
-
-        <EditText
-            android:id="@+id/editMemo"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_below="@id/textMemo"
-            android:layout_marginTop="10dp"
-            android:gravity="top"
-            android:hint="선택사항"
-            android:background="@drawable/round_edit_text_background"
-            android:padding="10dp"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:background="@color/korailBlue"
+            android:drawableTop="@drawable/ic_baseline_home_24"
+            android:text="HOME"
+            android:textColor="@color/white"
             android:gravity="center"
-            android:layout_alignParentBottom="true"
-            android:id="@+id/btnEnroll"
-            android:text="등록"/>
-    </RelativeLayout>
+            android:id="@+id/enrollHomeTextView"
+            />
 
-</LinearLayout>
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@color/darkkorailBlue"
+            android:drawableTop="@drawable/ic_baseline_add_24"
+            android:text="등록"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/enrollAddTextView"
+            />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@color/korailBlue"
+            android:drawableTop="@drawable/ic_baseline_search_24"
+            android:text="찾기"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/enrollSearchTextView"
+            />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@color/korailBlue"
+            android:drawableTop="@drawable/ic_baseline_settings_24"
+            android:text="환경설정"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/enrollSettingTextView"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -21,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnGoSearch = (Button) findViewById(R.id.btnGoSearch);
         Button btnGoEnroll = (Button) findViewById(R.id.btnGoEnroll);
+        TextView mainAddTextView = (TextView) findViewById(R.id.mainAddTextView);
+        TextView mainSearchTextView = (TextView) findViewById(R.id.mainSearchTextView);
+        TextView mainSettingTextView = (TextView) findViewById(R.id.mainSettingTextView);
 
         btnGoSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +39,33 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
+                startActivity(intent);
+                onStop();
+            }
+        });
+
+        mainAddTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
+                startActivity(intent);
+                onStop();
+            }
+        });
+
+        mainSearchTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                startActivity(intent);
+                onStop();
+            }
+        });
+
+        mainSettingTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
                 startActivity(intent);
                 onStop();
             }
