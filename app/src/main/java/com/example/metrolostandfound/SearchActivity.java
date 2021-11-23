@@ -165,8 +165,10 @@ public class SearchActivity extends AppCompatActivity {
     public void addItem(Bitmap image, String name, String category, String locate){
         RecyclerItemCustom item = new RecyclerItemCustom();
 
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.search);
-        item.setImage(bitmap);
+        if(image == null){
+            image = BitmapFactory.decodeResource(getResources(), R.drawable.search);
+        }
+        item.setImage(image);
         item.setName(name);
         item.setCategory(category);
         item.setLocate(locate);
