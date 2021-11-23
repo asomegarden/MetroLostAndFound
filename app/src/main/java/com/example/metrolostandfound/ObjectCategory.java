@@ -93,7 +93,7 @@ public class ObjectCategory {
         categories.put("카드", subCard);
         categories.put("현금", subMoney);
         categories.put("휴대폰", subPhone);
-        categories.put("기타 용품", subEtc);
+        categories.put("기타용품", subEtc);
     }
 
     public static List<String> getMainCategories(){return mainCategories;}

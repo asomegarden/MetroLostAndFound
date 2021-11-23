@@ -2,6 +2,7 @@ package com.example.metrolostandfound;
 
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -21,8 +22,14 @@ import retrofit2.http.QueryMap;
 public class DBController {
     private static List<LostObject> obj;
 
+    static {
+        obj = new ArrayList<>();
+    }
+
     //DB의 모든 아이템을 List로 반환
     public static List<LostObject> getItems(){
+        obj.clear();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://34.64.198.240:1337/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -31,13 +38,16 @@ public class DBController {
         RetrofitService service = retrofit.create(RetrofitService.class);
 
         Call<List<LostObject>> call = service.getItems();
+        List<LostObject> list = new ArrayList<>();
 
         call.enqueue((new Callback<List<LostObject>>() {
             @Override
             public void onResponse(Call<List<LostObject>> call, Response<List<LostObject>> response) {
                 if(response.isSuccessful()) {
-                    obj = response.body();
-                    Log.d("result", obj.toString());
+                    for(LostObject o : response.body()){
+                        list.add(LostObject.newInstance(o));
+                    }
+
                 }else {
                     Log.d("get 에러", response.message());
                 }
@@ -49,12 +59,14 @@ public class DBController {
                 t.printStackTrace();
             }
         }));
-
+        Log.d("테스트", list.toString());
         return obj;
     }
 
     //메인 카테고리로 검색
     public static List<LostObject> getItems(String mc){
+        obj.clear();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://34.64.198.240:1337/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -68,7 +80,7 @@ public class DBController {
             @Override
             public void onResponse(Call<List<LostObject>> call, Response<List<LostObject>> response) {
                 if(response.isSuccessful()) {
-                    obj = response.body();
+                    obj.addAll(response.body());
                     Log.d("result", obj.toString());
                 }else {
                     Log.d("get 에러", response.message());
@@ -87,6 +99,8 @@ public class DBController {
 
     //메인 카테고리 + 서브 카테고리로 검색
     public static List<LostObject> getItems(String mc, String sc){
+        obj.clear();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://34.64.198.240:1337/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -100,7 +114,7 @@ public class DBController {
             @Override
             public void onResponse(Call<List<LostObject>> call, Response<List<LostObject>> response) {
                 if(response.isSuccessful()) {
-                    obj = response.body();
+                    obj.addAll(response.body());
                     Log.d("result", obj.toString());
                 }else {
                     Log.d("get 에러", response.message());

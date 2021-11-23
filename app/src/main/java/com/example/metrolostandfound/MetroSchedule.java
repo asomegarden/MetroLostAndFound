@@ -15,12 +15,16 @@ import jxl.Workbook;
 
 public class MetroSchedule {
     private static Map<String, Map<String, List<String>>> suinbundang;
+    private static List<String> suinbundangStationList;
+    //순서를 맞추기 위해
     private static List<String> lines;
 
     //역 이름 별로 출발시간 리스트와 도착시간 리스트 가 있는 구조
     static{
         suinbundang = new HashMap<String, Map<String, List<String>>>();
-        lines = Arrays.asList(new String[]{"수인분당선"});
+        suinbundangStationList = new ArrayList<>();
+        lines = new ArrayList<>();
+        lines.add("수인분당선");
     }
     
     //역별로 따로 함수를 만들어뒀음 이게 좋을지는 모르겠는데 뭔가 이게 나을듯
@@ -50,6 +54,7 @@ public class MetroSchedule {
                                 contents = contents.replaceAll(" ", "");
                                 if(contents.length() != 0){
                                     name = contents;
+                                    suinbundangStationList.add(contents);
                                 }
                             }
                             else {
@@ -68,7 +73,7 @@ public class MetroSchedule {
                         else{ //짝수 인덱스에는 출발시간 (역에서 출발하느 시간)
                             Map<String, List<String>> d = new HashMap<String, List<String>>();
                             d.put("출발시간", times);
-                            suinbundang.get(name).put("출발시간", times);
+                            suinbundang.put(name, d);
                         }
                     }
                 }
@@ -87,7 +92,7 @@ public class MetroSchedule {
         return suinbundang.get(station).get("출발시간");
     }
     public static List<String> getSuinbundangStationList(){
-        return new ArrayList<>(suinbundang.keySet());
+        return suinbundangStationList;
     }
     
 }
