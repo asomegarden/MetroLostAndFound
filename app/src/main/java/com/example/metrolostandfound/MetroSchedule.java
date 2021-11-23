@@ -28,7 +28,7 @@ public class MetroSchedule {
     }
     
     //역별로 따로 함수를 만들어뒀음 이게 좋을지는 모르겠는데 뭔가 이게 나을듯
-    public static void readSuinbundangExcel(InputStream is) {
+    public static void readSuinbundangE1xcel(InputStream is) {
         try {
             Workbook wb = Workbook.getWorkbook(is);
 

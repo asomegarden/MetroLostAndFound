@@ -3,12 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/korailBlue">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_baseline_directions_subway_24"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/introTextView"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="분실물아 대답해"
         android:textColor="@color/white"
+        android:id="@+id/introTextView"
         android:layout_centerInParent="true"
         android:textSize="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/introTextView"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="7dp"
+        android:text="-지하철 분실물 신고 어플리케이션-"
+        android:textColor="@color/white"
+        android:textSize="10dp" />
 
 </RelativeLayout>

@@ -45,7 +45,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:layout_weight="12"
+            android:layout_weight="1"
             android:background="@drawable/round_background"
             android:text="분실물 등록"
             android:textColor="@color/white"
@@ -59,7 +59,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
-            android:layout_weight="13"
+            android:layout_weight="1"
             android:background="@drawable/round_background"
             android:text="분실물 검색"
             android:textColor="@color/white"/>

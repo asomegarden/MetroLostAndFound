@@ -16,6 +16,7 @@
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/xml/network_security_config.xml" value="0.2046875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2171875" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/ic_baseline_directions_subway_24.xml" value="0.3764102564102564" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2171875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2171875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2171875" />
@@ -27,6 +28,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_enroll.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_intro.xml" value="0.1661600810536981" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_product_detail.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_search.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_search_detail.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_search_result.xml" value="0.25" />
