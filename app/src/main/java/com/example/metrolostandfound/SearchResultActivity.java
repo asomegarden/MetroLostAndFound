@@ -7,7 +7,9 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,6 +41,34 @@ public class SearchResultActivity extends AppCompatActivity {
         //테스트를 위해 추가된 부분. 나중에 지워도 됨
         loadItemTest();
     }
+    private class DBLoadCall extends AsyncTask<String, String, String> {
+
+        List<LostObject> objs = new ArrayList<>();
+        @Override
+        protected String doInBackground(String[] params) {
+            if(params.length == 0) {
+                objs.addAll(DBController.getItems());
+            }
+            else if(params.length == 1){
+                objs.addAll(DBController.getItems(params[0]));
+            }
+            else if(params.length == 2){
+                objs.addAll(DBController.getItems(params[0], params[1]));
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            if(objs != null) {
+                for (LostObject object : objs) {
+                    addItem(object.getImage(), object.getSubCategory(), object.getMainCategory(), object.getLine() + " " + object.getStation());
+                }
+            }
+            //데이터 변경 반영
+            mAdapter.notifyDataSetChanged();
+        }
+    }
 
     //테스트용
     public void loadItemTest(){
@@ -56,32 +86,18 @@ public class SearchResultActivity extends AppCompatActivity {
 
     //리스트 내용 모두 불러오기
     public void loadItem(){
-        List<LostObject> objs = DBController.getItems();
-
-        for(LostObject object : objs){
-            addItem(object.getImage(), object.getSubCategory(), object.getMainCategory(), object.getLine() + " " + object.getStation());
-        }
+        new DBLoadCall().execute();
     }
 
     //리스트 내용 메인 카테고리로 불러오기
     public void loadItem(String mc){
-        List<LostObject> objs = DBController.getItems(mc);
-
-        for(LostObject object : objs){
-            addItem(object.getImage(), object.getSubCategory(), object.getMainCategory(), object.getLine() + " " + object.getStation());
-        }
+        new DBLoadCall().execute(mc);
     }
 
     //리스트 내용 메인 카테고리와 서브 카테고리로 불러오기
     public void loadItem(String mc, String sc){
-        List<LostObject> objs = DBController.getItems(mc, sc);
-
-        for(LostObject object : objs){
-            addItem(object.getImage(), object.getSubCategory(), object.getMainCategory(), object.getLine() + " " + object.getStation());
-        }
+        new DBLoadCall().execute(mc, sc);
     }
-
-
 
     //리스트에 아이템 추가
     public void addItem(Bitmap image, String name, String category, String locate){

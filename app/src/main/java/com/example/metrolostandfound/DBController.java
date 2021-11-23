@@ -1,7 +1,9 @@
 package com.example.metrolostandfound;
 
+import android.os.AsyncTask;
 import android.util.Log;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -21,14 +23,17 @@ import retrofit2.http.QueryMap;
 
 public class DBController {
     private static List<LostObject> obj;
+    private static boolean loading;
 
     static {
         obj = new ArrayList<>();
+        loading = false;
     }
 
     //DB의 모든 아이템을 List로 반환
     public static List<LostObject> getItems(){
         obj.clear();
+        loading = true;
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://34.64.198.240:1337/")
@@ -38,15 +43,15 @@ public class DBController {
         RetrofitService service = retrofit.create(RetrofitService.class);
 
         Call<List<LostObject>> call = service.getItems();
-        List<LostObject> list = new ArrayList<>();
 
         call.enqueue((new Callback<List<LostObject>>() {
             @Override
             public void onResponse(Call<List<LostObject>> call, Response<List<LostObject>> response) {
                 if(response.isSuccessful()) {
                     for(LostObject o : response.body()){
-                        list.add(LostObject.newInstance(o));
+                        obj.add(new LostObject(o));
                     }
+                    loading = false;
 
                 }else {
                     Log.d("get 에러", response.message());
@@ -59,13 +64,15 @@ public class DBController {
                 t.printStackTrace();
             }
         }));
-        Log.d("테스트", list.toString());
+
+        while (loading){;}
         return obj;
     }
 
     //메인 카테고리로 검색
     public static List<LostObject> getItems(String mc){
         obj.clear();
+        loading = true;
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://34.64.198.240:1337/")
@@ -80,8 +87,10 @@ public class DBController {
             @Override
             public void onResponse(Call<List<LostObject>> call, Response<List<LostObject>> response) {
                 if(response.isSuccessful()) {
-                    obj.addAll(response.body());
-                    Log.d("result", obj.toString());
+                    for(LostObject o : response.body()){
+                        obj.add(new LostObject(o));
+                    }
+                    loading = false;
                 }else {
                     Log.d("get 에러", response.message());
                 }
@@ -94,6 +103,7 @@ public class DBController {
             }
         }));
 
+        while (loading){;}
         return obj;
     }
 
@@ -114,8 +124,10 @@ public class DBController {
             @Override
             public void onResponse(Call<List<LostObject>> call, Response<List<LostObject>> response) {
                 if(response.isSuccessful()) {
-                    obj.addAll(response.body());
-                    Log.d("result", obj.toString());
+                    for(LostObject o : response.body()){
+                        obj.add(new LostObject(o));
+                    }
+                    loading = false;
                 }else {
                     Log.d("get 에러", response.message());
                 }
@@ -128,6 +140,7 @@ public class DBController {
             }
         }));
 
+        while (loading){;}
         return obj;
     }
 
@@ -215,35 +228,4 @@ interface RetrofitService {
     @DELETE("posts/{id}")
     Call<Void> deletePost(@Path("id") int id);
 
-    //이건 아이디로 하나만 가져오는 건데 사실상 필요없음 그리고 메인 카테고리로 검색이랑 오버라이딩이 겹쳐서 안 쓸듯
-    //@GET("items/{item}")
-    //Call<LostObject> getItems(@Path("item") String post);
-
-    /*
-    Map<String, String> querys = new HashMap<>();
-    querys.put("userId", "10");
-    querys.put("id", "96");
-     */
-
-
-
-    /*
-    @FormUrlEncoded
-    @POST("posts")
-    Call<PostResult> setPostField(
-	@Field("userId") String userId,
-   	@Field("title") String title,
-   	@Field("body") String body
-);
-
-    @FormUrlEncoded
-    @POST("posts")
-    Call<PostResult> setPostFieldMap(
-	@FieldMap Map<String, String> fieldMap
-);
-     */
-
-    
-
-    
 }
