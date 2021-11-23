@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import jxl.Sheet;
 import jxl.Workbook;
@@ -16,7 +17,6 @@ public class Schedule {
     //역 이름 별로 출발시간 리스트와 도착시간 리스트 가 있는 구조
     static{
         suinbundang = new HashMap<String, Map<String, List<String>>>();
-
     }
     
     //역별로 따로 함수를 만들어뒀음 이게 좋을지는 모르겠는데 뭔가 이게 나을듯
@@ -36,23 +36,24 @@ public class Schedule {
                     }
 
                     String name = null;
-                    List<String> times = new ArrayList<>();
+
 
                     for (int row = rowIndexStart; row < rowTotal; row++) {
-                        times.clear();
+                        List<String> times = new ArrayList<>();
                         for (int col = 1; col < colTotal; col++) {
                             if(col == 1){
                                 String contents = sheet.getCell(col, row).getContents();
+                                contents = contents.replaceAll(" ", "");
                                 if(contents.length() != 0){
                                     name = contents;
                                 }
                             }
                             else {
                                 String contents = sheet.getCell(col, row).getContents();
+                                contents = contents.replaceAll(" ", "");
                                 if (contents.length() != 0) {
                                     times.add(contents);
                                 }
-                                Log.d("Main", name + " " +  col + "번째" + contents);
                             }
                         }
                         if(row%2 == 1){ //홀수 인덱스에는 도착시간 (역에 도착하는 시간)

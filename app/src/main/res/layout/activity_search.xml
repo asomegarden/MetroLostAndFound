@@ -9,14 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/round_background"
-        android:id="@+id/searchLinearLayout"
-        >
+        android:layout_margin="10dp"
+        android:id="@+id/searchLinearLayout">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="검색"
-            android:textSize="45dp"
+            android:textSize="30dp"
             android:textColor="@color/white"
             android:gravity="center"
             android:layout_alignParentTop="true"/>
@@ -26,10 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:src="@drawable/ic_baseline_search_24"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:id="@+id/searchImageView"
-            />
+            android:padding="10dp"
+            android:id="@+id/searchImageView" />
 
     </RelativeLayout>
 
@@ -103,7 +101,5 @@
             />
 
     </LinearLayout>
-
-
 
 </RelativeLayout>

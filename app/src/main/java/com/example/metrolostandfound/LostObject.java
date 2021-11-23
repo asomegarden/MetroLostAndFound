@@ -14,7 +14,7 @@ import java.io.ByteArrayOutputStream;
 
 public class LostObject
 {
-    private String item_id;
+    private String passwd;
     private String sub_category;
     private String line;
     private String storage;
@@ -37,8 +37,8 @@ public class LostObject
     //      사용하는 사람은 그냥 Bitmap 이미지를 쓴다고 생각하고 쓰면 됨 변환 알아서 다 됨
     //      근데 이건 DB에서 임의로 올릴 수 있는게 아니라 나중에 등록 구현하고 앱에서 등록해봐야함
 
-    public String getItemId () { return item_id; }
-    public void setItem_id (String item_id) { this.item_id = item_id; }
+    public String getPasswd () { return passwd; }
+    public void getPasswd (String passwd) { this.passwd = passwd; }
 
     public String getSubCategory () { return sub_category; }
     public void setSubCategory (String sub_category) { this.sub_category = sub_category; }
@@ -68,7 +68,7 @@ public class LostObject
     @Override
     public String toString()
     {
-        return "LostObject [item_id = "+item_id+", sub_category = "+sub_category+", line = "+line+", created_at = "+created_at+", storage = "+storage+", date_time = "+date_time+", updated_at = "+updated_at+", contents = "+contents+", station = "+station+", main_category = "+main_category+", id = "+id+", published_at = "+published_at+", image = "+image+"]";
+        return "LostObject [item_id = "+passwd+", sub_category = "+sub_category+", line = "+line+", created_at = "+created_at+", storage = "+storage+", date_time = "+date_time+", updated_at = "+updated_at+", contents = "+contents+", station = "+station+", main_category = "+main_category+", id = "+id+", published_at = "+published_at+", image = "+image+"]";
     }
 
     //이 밑의 항목들은 따로 지정해주지 않아도 DB에서 알아서 지정, 읽을 때만 있으면 됨

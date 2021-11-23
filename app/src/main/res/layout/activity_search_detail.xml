@@ -6,13 +6,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/round_background"
-        android:id="@+id/searchDetailLinearLayout"
-        >
+        android:layout_margin="10dp"
+        android:id="@+id/searchDetailLinearLayout">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="세부 검색"
-            android:textSize="45dp"
+            android:textSize="30dp"
             android:textColor="@color/white"
             android:gravity="center"
             android:layout_alignParentTop="true"/>
@@ -54,6 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="검색"
+        android:layout_margin="10dp"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="분실물아 어딨니?"
+        android:text="분실물아 대답해"
         android:textColor="@color/white"
         android:layout_centerInParent="true"
         android:textSize="40dp"/>
