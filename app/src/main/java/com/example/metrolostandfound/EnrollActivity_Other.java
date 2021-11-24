@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -65,9 +66,12 @@ public class EnrollActivity_Other extends AppCompatActivity {
                 newObj.setStorage(editStorage.getText().toString());
                 newObj.setContents(editMemo.getText().toString());
                 newObj.setImage(choice_img);
+                newObj.setTrain(MetroSchedule.whatTrain(newObj));
                 DBController.postItem(newObj);
                 startActivity(intent2);
 
+
+                //Log.e("열차이름", newObj.getTrain());
                 //이렇게 계속 추가해서 데이터 다 입력하면
                 //DBController.postItem(obj);
                 //하면 됨

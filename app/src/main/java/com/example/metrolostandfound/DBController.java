@@ -145,6 +145,43 @@ public class DBController {
         return obj;
     }
 
+    //메인 카테고리 + 서브 카테고리 + 호선으로 검색
+    public static List<LostObject> getItems(String mc, String sc, String l){
+        obj.clear();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://34.64.198.240:1337/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        RetrofitService service = retrofit.create(RetrofitService.class);
+
+        Call<List<LostObject>> call = service.getItems(mc, sc, l);
+
+        call.enqueue((new Callback<List<LostObject>>() {
+            @Override
+            public void onResponse(Call<List<LostObject>> call, Response<List<LostObject>> response) {
+                if(response.isSuccessful()) {
+                    for(LostObject o : response.body()){
+                        obj.add(new LostObject(o));
+                    }
+                    loading = false;
+                }else {
+                    Log.d("get 에러", response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<LostObject>> call, Throwable t) {
+                Log.d("get 실패", "이유 : ");
+                t.printStackTrace();
+            }
+        }));
+
+        while (loading){;}
+        return obj;
+    }
+
     //id로 하나만 받아오기
     public static LostObject getItem(int id){
         loading = true;
@@ -235,6 +272,8 @@ public class DBController {
             }
         });
     }
+    
+    
 }
 
 //API 메소드 사용을 위한 인터페이스 나중에 Query도 만들거임
@@ -249,12 +288,20 @@ interface RetrofitService {
     //메인 카테고리로 검색
     @GET("items")
     Call<List<LostObject>> getItems(@Query("main_category") String mc);
-    
+
     //메인 카테고리와 서브 카테고리로 검색
     @GET("items")
     Call<List<LostObject>> getItems(
             @Query("main_category") String mc,
             @Query("sub_category") String sc
+    );
+
+    //메인 카테고리와 서브 카테고리와 호선으로 검색
+    @GET("items")
+    Call<List<LostObject>> getItems(
+            @Query("main_category") String mc,
+            @Query("sub_category") String sc,
+            @Query("line") String l
     );
 
     @GET("items")

@@ -25,6 +25,7 @@ public class LostObject implements Cloneable
     private String station;
     private String main_category;
     private String image;
+    private String train;
 
     //얘들은 DB 등록될 때 자동으로 만들어지는 정보
     private String id;
@@ -45,6 +46,7 @@ public class LostObject implements Cloneable
         id = null;
         published_at = null;
         updated_at = null;
+        train = null;
         created_at = null;
     }
 
@@ -65,25 +67,6 @@ public class LostObject implements Cloneable
         this.created_at = o.created_at;
     }
 
-    public static LostObject newInstance(LostObject o){
-        LostObject newObj = new LostObject();
-        newObj.passwd = o.passwd;
-        newObj.sub_category = o.sub_category;
-        newObj.line = o.line;
-        newObj.storage = o.storage;
-        newObj.date_time = o.date_time;
-        newObj.contents = o.contents;
-        newObj.station = o.station;
-        newObj.main_category = o.main_category;
-        newObj.image = o.image;
-
-        newObj.id = o.id;
-        newObj.published_at = o.published_at;
-        newObj.updated_at = o.updated_at;
-        newObj.created_at = o.created_at;
-
-        return newObj;
-    }
 
     //10/31 image는 json에서 변환해오는 과정에 문제가 있어서 다른 방법을 좀 찾아봐야함
     //11/01 원래 이미지만 저장하는 테이블 만들어서 따로 받아오면 어떨까 했는데 
@@ -94,6 +77,9 @@ public class LostObject implements Cloneable
 
     public String getPasswd () { return passwd; }
     public void setPasswd (String passwd) { this.passwd = passwd; }
+
+    public String getTrain() {return train;}
+    public void setTrain(String t){train = t;}
 
     public String getSubCategory () { return sub_category; }
     public void setSubCategory (String sub_category) { this.sub_category = sub_category; }

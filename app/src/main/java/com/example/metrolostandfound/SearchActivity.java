@@ -106,6 +106,9 @@ public class SearchActivity extends AppCompatActivity {
             else if(params.length == 2){
                 objs.addAll(DBController.getItems(params[0], params[1]));
             }
+            else if(params.length == 3){
+                objs.addAll(DBController.getItems(params[0], params[1], params[2]));
+            }
             return null;
         }
 
@@ -134,6 +137,11 @@ public class SearchActivity extends AppCompatActivity {
     //리스트 내용 메인 카테고리와 서브 카테고리로 불러오기
     public void loadItem(String mc, String sc){
         new DBLoadCall().execute(mc, sc);
+    }
+
+    //리스트 내용 메인 카테고리와 서브 카테고리와 호선으로 불러오기
+    public void loadItem(String mc, String sc, String l){
+        new DBLoadCall().execute(mc, sc, l);
     }
 
     //리스트에 아이템 추가
