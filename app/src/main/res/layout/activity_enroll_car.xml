@@ -55,7 +55,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/notice2"
             android:layout_marginTop="200dp"
-            android:checkedButton="@id/rdoAll"
             android:orientation="horizontal"
             android:gravity="center">
 
