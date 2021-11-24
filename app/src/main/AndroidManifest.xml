@@ -34,7 +34,7 @@
         </activity>
         <activity android:name=".SearchActivity" />
         <activity android:name=".SearchResultActivity" />
-        <activity android:name=".EnrollActivity" />
+        <activity android:name=".SearchDetailActivity" />
         <activity android:name=".SettingActivity"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".ObjectViewActivity"
