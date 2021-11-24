@@ -38,8 +38,6 @@ public class SearchResultActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        //테스트를 위해 추가된 부분. 나중에 지워도 됨
-        loadItemTest();
     }
     private class DBLoadCall extends AsyncTask<String, String, String> {
 
@@ -62,26 +60,12 @@ public class SearchResultActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             if(objs != null) {
                 for (LostObject object : objs) {
-                    addItem(object.getImage(), object.getSubCategory(), object.getMainCategory(), object.getLine() + " " + object.getStation());
+                    addItem(object);
                 }
             }
             //데이터 변경 반영
             mAdapter.notifyDataSetChanged();
         }
-    }
-
-    //테스트용
-    public void loadItemTest(){
-
-        //이미지 리스트뷰 테스트용
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.search);
-
-        //꼭 텍스트 말고 다른 것도 넣을 수 있음 일단은 테스트용으로 텍스트
-        addItem(bitmap, "아이폰7", "스마트폰", "1호선 시청역");
-        addItem(bitmap, "카시오 시계", "시계", "수인분당선 망포역");
-        addItem(bitmap, "책가방", "가방", "4호선 석계역");
-        addItem(bitmap, "에어팟", "이어폰", "1호선 수원역");
-        addItem(bitmap, "갤럭시 s10", "스마트폰", "2호선 강남역");
     }
 
     //리스트 내용 모두 불러오기
@@ -100,16 +84,19 @@ public class SearchResultActivity extends AppCompatActivity {
     }
 
     //리스트에 아이템 추가
-    public void addItem(Bitmap image, String name, String category, String locate){
+    public void addItem(LostObject object){
         RecyclerItemCustom item = new RecyclerItemCustom();
 
+        Bitmap image = object.getImage();
         if(image == null){
             image = BitmapFactory.decodeResource(getResources(), R.drawable.search);
         }
+
+        item.setId(Integer.parseInt(object.getId()));
         item.setImage(image);
-        item.setName(name);
-        item.setCategory(category);
-        item.setLocate(locate);
+        item.setMC(object.getMainCategory());
+        item.setSC(object.getSubCategory());
+        item.setLocate(object.getLine() + " " + object.getStation());
 
         mList.add(item);
     }

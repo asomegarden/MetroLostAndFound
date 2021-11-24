@@ -1,9 +1,11 @@
 package com.example.metrolostandfound;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RecyclerItemCustomAdapter extends RecyclerView.Adapter<RecyclerItemCustomAdapter.ViewHolder>{
     private ArrayList<RecyclerItemCustom> mData = null;
@@ -41,8 +44,8 @@ public class RecyclerItemCustomAdapter extends RecyclerView.Adapter<RecyclerItem
         RecyclerItemCustom item = mData.get(position);
 
         holder.imageView.setImageBitmap(item.getImage());
-        holder.name.setText(item.getName());
-        holder.category.setText(item.getCategory());
+        holder.mc.setText(item.getMC());
+        holder.sc.setText(item.getSC());
         holder.locate.setText(item.getLocate());
     }
 
@@ -54,16 +57,31 @@ public class RecyclerItemCustomAdapter extends RecyclerView.Adapter<RecyclerItem
     //아이템 수정할 때 여기도 수정
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView imageView;
-        TextView name;
-        TextView category;
+        TextView mc;
+        TextView sc;
         TextView locate;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             imageView = itemView.findViewById(R.id.item_image);
-            name = itemView.findViewById(R.id.item_text_name);
-            category = itemView.findViewById(R.id.item_text_cate);
+            mc = itemView.findViewById(R.id.item_text_mc);
+            sc = itemView.findViewById(R.id.item_text_sc);
             locate = itemView.findViewById(R.id.item_text_loc);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition() ;
+                    if (pos != RecyclerView.NO_POSITION) {
+
+                        RecyclerItemCustom item = mData.get(pos) ;
+
+                        Intent intent = new Intent(v.getContext(), ObjectViewActivity.class);
+                        intent.putExtra("id", item.getId());
+                        v.getContext().startActivity(intent);
+                    }
+                }
+            });
         }
     }
 }

@@ -23,6 +23,7 @@ import retrofit2.http.QueryMap;
 
 public class DBController {
     private static List<LostObject> obj;
+    private static LostObject lo;
     private static boolean loading;
 
     static {
@@ -144,6 +145,41 @@ public class DBController {
         return obj;
     }
 
+    //id로 하나만 받아오기
+    public static LostObject getItem(int id){
+        loading = true;
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://34.64.198.240:1337/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        RetrofitService service = retrofit.create(RetrofitService.class);
+
+        Call<LostObject> call = service.getItem(id);
+
+        call.enqueue((new Callback<LostObject>() {
+            @Override
+            public void onResponse(Call<LostObject> call, Response<LostObject> response) {
+                if(response.isSuccessful()) {
+                    lo = new LostObject(response.body());
+
+                    loading = false;
+                }else {
+                    Log.d("get 에러", response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LostObject> call, Throwable t) {
+                Log.d("get 실패", "이유 : ");
+                t.printStackTrace();
+            }
+        }));
+
+        while (loading){;}
+        return lo;
+    }
+
     //obj를 DB에 등록
     public static void postItem(LostObject obj){
         Retrofit retrofit = new Retrofit.Builder()
@@ -204,6 +240,9 @@ public class DBController {
 //API 메소드 사용을 위한 인터페이스 나중에 Query도 만들거임
 interface RetrofitService {
     //전부 받아오기
+    @GET("items/{id}")
+    Call<LostObject> getItem(@Path("id") int id);
+
     @GET("items")
     Call<List<LostObject>> getItems();
 
