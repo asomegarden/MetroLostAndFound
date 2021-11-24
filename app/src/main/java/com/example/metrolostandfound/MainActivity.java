@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         mainAddTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
+                Intent intent = new Intent(getApplicationContext(), EnrollActivity_main.class);
                 startActivity(intent);
                 onStop();
             }

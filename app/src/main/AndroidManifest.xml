@@ -35,6 +35,8 @@
         <activity android:name=".SearchActivity" />
         <activity android:name=".SearchResultActivity" />
         <activity android:name=".EnrollActivity" />
+        <activity android:name=".SettingActivity"/>
+
         <activity android:name=".EnrollActivity_main" />
         <activity android:name=".EnrollActivity_Acc"
             android:exported="true">

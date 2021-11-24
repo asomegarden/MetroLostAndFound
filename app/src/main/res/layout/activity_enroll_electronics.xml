@@ -12,15 +12,6 @@
         android:layout_marginTop="100dp">
 
 
-        <Button
-            android:id="@+id/acc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="115dp"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:text="전자기기" />
-
         <TextView
             android:id="@+id/notice"
             android:layout_width="match_parent"
@@ -30,7 +21,7 @@
             android:layout_marginTop="57dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:text="            군요!"
+            android:text="전자기기군요!"
             android:textColor="@color/black"
             android:textSize="24dp"
             android:gravity="center"/>

@@ -6,178 +6,149 @@
     android:orientation="vertical"
     android:padding="10dp">
 
-    <RelativeLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:layout_marginTop="50dp">
-
-
-        <TextView
-            android:id="@+id/notice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="39dp"
-            android:layout_marginTop="57dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text=""
-            android:textColor="@color/gray"
-            android:textSize="24dp" />
         <TextView
             android:id="@+id/notice2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="39dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_below="@+id/notice"
+            android:layout_weight="8"
             android:text="어떤 물건을 습득하셨나요???"
             android:textColor="@color/black"
             android:textSize="24dp"
             android:gravity="center"/>
 
-        <RadioGroup
-            android:id="@+id/rdoCategory"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/notice2"
-            android:layout_marginTop="150dp"
+            android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="center">
 
             <Button
                 android:id="@+id/btn_Acc"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="귀중품" />
 
             <Button
                 android:id="@+id/btn_Bag"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="가방" />
 
             <Button
                 android:id="@+id/btn_Book"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="도서" />
 
             <Button
                 android:id="@+id/btn_Glasses"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="안경" />
 
-        </RadioGroup>
-        <RadioGroup
-            android:id="@+id/rdoCategory2"
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/rdoCategory"
-            android:layout_marginTop="30dp"
+            android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="center">
             <Button
                 android:id="@+id/btn_Tool"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="공구" />
             <Button
                 android:id="@+id/btn_Sport"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="스포츠 용품" />
             <Button
                 android:id="@+id/btn_Cloth"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="의류" />
 
             <Button
                 android:id="@+id/btn_Car"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="9dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="자동차" />
-        </RadioGroup>
+        </LinearLayout>
 
-        <RadioGroup
-            android:id="@+id/rdoCategory3"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/rdoCategory2"
-            android:layout_marginTop="30dp"
+            android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="center">
             <Button
                 android:id="@+id/btn_Elect"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="전자기기" />
             <Button
                 android:id="@+id/btn_Wallet"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="지갑" />
             <Button
                 android:id="@+id/btn_Paper"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="증명서" />
             <Button
                 android:id="@+id/btn_Cash"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="현금" />
 
-        </RadioGroup>
-        <RadioGroup
-            android:id="@+id/rdoCategory4"
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/rdoCategory3"
-            android:layout_marginTop="30dp"
+            android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="center">
             <Button
                 android:id="@+id/btn_Card"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="카드" />
 
             <Button
                 android:id="@+id/btn_Phone"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="휴대폰/주변기기" />
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="휴대폰" />
 
             <Button
                 android:id="@+id/btn_Etc"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:text="기타 용품" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="" />
 
-        </RadioGroup>
-
-    </RelativeLayout>
+        </LinearLayout>
 
 </LinearLayout>
