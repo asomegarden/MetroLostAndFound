@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lineArray">
+        <item>전체</item>
+        <item>1호선</item>
+        <item>2호선</item>
+        <item>3호선</item>
+        <item>4호선</item>
+        <item>5호선</item>
+        <item>6호선</item>
+        <item>7호선</item>
+        <item>수인분당선</item>
+    </string-array>
+
+    <string-array name="stationArray">
+        <item>전체</item>
+        <item>수원역</item>
+    </string-array>
+
+    <string-array name="suin_bundangStationArray">
+        <item>전체</item>
+        <item>수원역</item>
+    </string-array>
+
+    <string-array name="locationArray">
+        <item>전체</item>
+        <item>1-1</item>
+        <item>1-2</item>
+        <item>1-3</item>
+        <item>1-4</item>
+        <item>2-1</item>
+        <item>2-2</item>
+        <item>2-3</item>
+        <item>2-4</item>
+
+    </string-array>
+
+    <string-array name="bigProductArray">
+        <item>전체</item>
+        <item>가방</item>
+        <item>귀금속</item>
+        <item>도서</item>
+        <item>안경</item>
+        <item>공구</item>
+        <item>스포츠용품</item>
+        <item>의류</item>
+        <item>자동차</item>
+        <item>지갑</item>
+        <item>증명서</item>
+        <item>카드</item>
+        <item>현금</item>
+        <item>휴대폰</item>
+        <item>기타</item>
+    </string-array>
+    <string-array name="allSmallProductArray">
+        <item>전체</item>
+    </string-array>
+    <string-array name="bagSmallProductArray">
+        <item>전체</item>
+    </string-array>
+    <string-array name="jewelSmallProductArray">
+        <item>전체</item>
+    </string-array>
+    <string-array name="bookSmallProductArray">
+        <item>전체</item>
+    </string-array>
+</resources>

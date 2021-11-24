@@ -1,9 +1,13 @@
 package com.example.metrolostandfound;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,6 +40,7 @@ public class RecyclerItemCustomAdapter extends RecyclerView.Adapter<RecyclerItem
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         RecyclerItemCustom item = mData.get(position);
 
+        holder.imageView.setImageBitmap(item.getImage());
         holder.name.setText(item.getName());
         holder.category.setText(item.getCategory());
         holder.locate.setText(item.getLocate());
@@ -46,15 +51,16 @@ public class RecyclerItemCustomAdapter extends RecyclerView.Adapter<RecyclerItem
         return mData.size();
     }
 
-
     //아이템 수정할 때 여기도 수정
     public class ViewHolder extends RecyclerView.ViewHolder{
+        ImageView imageView;
         TextView name;
         TextView category;
         TextView locate;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            imageView = itemView.findViewById(R.id.item_image);
             name = itemView.findViewById(R.id.item_text_name);
             category = itemView.findViewById(R.id.item_text_cate);
             locate = itemView.findViewById(R.id.item_text_loc);

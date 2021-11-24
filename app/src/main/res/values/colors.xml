@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#FFFFFFFF</color>
     <color name="korailBlue">#FF003DA5</color>
+    <color name="darkkorailBlue">#072351</color>
     <color name="gray">#FFCCCCCC</color>
 </resources>
