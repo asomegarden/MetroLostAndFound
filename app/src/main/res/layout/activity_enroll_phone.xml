@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp">
+
+
+        <Button
+            android:id="@+id/acc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="핸드폰" />
+
+        <TextView
+            android:id="@+id/notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="               이군요!"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/notice2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/notice"
+            android:text="어떤 종류인가요??"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:gravity="center"/>
+
+        <RadioGroup
+            android:id="@+id/rdoCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notice2"
+            android:layout_marginTop="150dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_Samsung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="삼성 휴대폰" />
+
+            <Button
+                android:id="@+id/btn_LG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="LG 휴대폰" />
+
+            <Button
+                android:id="@+id/btn_Apple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="아이폰" />
+
+            <Button
+                android:id="@+id/btn_2G"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="피쳐폰" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rdoCategory2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rdoCategory"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btn_Case"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="케이스" />
+
+
+            <Button
+                android:id="@+id/btn_Charger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="충전기" />
+
+            <Button
+                android:id="@+id/btn_Else"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="기타" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</LinearLayout>

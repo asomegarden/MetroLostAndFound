@@ -2,6 +2,8 @@ package com.example.metrolostandfound;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Base64;
 
 import java.io.ByteArrayOutputStream;
@@ -133,6 +135,9 @@ public class LostObject implements Cloneable
     private void setCreated_at (String created_at) { this.created_at = created_at; }
     private String getUpdated_at () { return updated_at; }
     private void setUpdated_at (String updated_at) { this.updated_at = updated_at; }
+
+
+
 }
 
 // 비트맵과 스트링 간의 변환을 위한 클래스

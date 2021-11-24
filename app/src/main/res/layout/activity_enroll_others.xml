@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp">
+
+
+        <TextView
+            android:id="@+id/notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="습득물의 사진과 보관장소"
+            android:textColor="@color/black"
+            android:textSize="24dp" />
+        <TextView
+            android:id="@+id/notice2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/notice"
+            android:text="그리고 추가설명을 작성해주세요"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:gravity="center"/>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:layout_gravity="center"
+
+            android:layout_marginTop="20sp"
+
+            >
+
+            <ImageView
+
+                android:id="@+id/image"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:maxWidth="200dp"
+                android:maxHeight="200dp"
+                android:layout_marginTop="120dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/round_edit_text_background"
+                android:onClick="onClick"/>
+
+            <Button
+
+                android:id="@+id/btn_UploadPicture"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/gray"
+                android:text="사진 선택"
+                android:onClick="onClick"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+
+
+        출처: https://jeongchul.tistory.com/287 [Jeongchul]
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="360dp"
+            android:text="보관장소 : "
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:id="@+id/textStorage"/>
+
+        <EditText
+            android:id="@+id/editStorage"
+            android:layout_marginTop="350dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textStorage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="추가 설명"
+            android:layout_marginTop="280dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:id="@+id/textMemo"
+            android:layout_below="@+id/notice2"/>
+
+        <EditText
+            android:id="@+id/editMemo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/textMemo"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            android:hint="선택사항"
+            android:background="@drawable/round_edit_text_background"
+            android:padding="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btn_Enroll"
+            android:text="등록"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
