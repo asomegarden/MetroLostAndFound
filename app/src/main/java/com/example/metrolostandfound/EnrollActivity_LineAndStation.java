@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -76,8 +77,8 @@ public class EnrollActivity_LineAndStation extends AppCompatActivity {
                 choice_line = adapterLine.getItem(position).toString();
                 if(choice_line.equals("수인분당선")){
                     adapterStation = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, MetroSchedule.getSuinbundangStationList());
+                    adapterStation.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
                     spinnerStation.setAdapter(adapterStation);
-                    adapterStation.notifyDataSetChanged();
                 }
             }
 
@@ -159,11 +160,13 @@ public class EnrollActivity_LineAndStation extends AppCompatActivity {
 
     private void initSpinner(){
         List<String> defaultList = new ArrayList<>();
-
         defaultList.add("모두");
 
         adapterLine =  new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, MetroSchedule.getLines());
+        adapterLine.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+
         adapterStation = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, defaultList);
+        adapterStation.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
 
         spinnerLine.setAdapter(adapterLine);
         spinnerStation.setAdapter(adapterStation);

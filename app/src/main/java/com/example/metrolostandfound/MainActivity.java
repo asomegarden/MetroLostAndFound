@@ -6,15 +6,10 @@ import androidx.core.app.ActivityCompat;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         mainAddTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), EnrollActivity_main.class);
+                Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
                 startActivity(intent);
                 onStop();
             }

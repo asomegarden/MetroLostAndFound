@@ -41,63 +41,76 @@
             android:gravity="center"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:paddingHorizontal="10dp"
             android:id="@+id/linear1"
-            android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
-                android:gravity="center"
+                android:gravity="end"
                 android:text="호선:"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/enrollLineSpinner"
-                android:layout_width="120dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="65dp"
                 android:layout_gravity="center"
                 android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/linear1"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:gravity="end"
                 android:text="역:"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/enrollStationSpinner"
-                android:layout_width="120dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginRight="65dp"
                 android:gravity="center" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_centerInParent="true"
             android:paddingHorizontal="10dp"
-            android:layout_below="@+id/linear1"
-            android:id="@+id/linear2"
+            android:layout_below="@+id/linear2"
+            android:id="@+id/linear3"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
-                android:gravity="center"
+                android:gravity="end"
                 android:text="날짜:"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -117,18 +130,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_centerInParent="true"
             android:paddingHorizontal="10dp"
-            android:layout_below="@+id/linear2"
+            android:layout_below="@+id/linear3"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
-                android:gravity="center"
+                android:gravity="end"
                 android:text="시간:"
                 android:textSize="20dp"
                 android:textStyle="bold" />
