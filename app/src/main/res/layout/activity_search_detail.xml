@@ -15,15 +15,31 @@
         android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:background="@drawable/round_background"
-            android:gravity="center"
-            android:text="세부 검색"
-            android:textColor="@color/white"
-            android:textSize="30dp" />
+            android:layout_margin="10dp"
+            android:id="@+id/searchLinearLayout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="상세 검색"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_alignParentTop="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:padding="10dp"
+                android:id="@+id/searchImageView" />
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
