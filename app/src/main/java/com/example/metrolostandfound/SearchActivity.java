@@ -32,6 +32,9 @@ public class SearchActivity extends AppCompatActivity {
     RecyclerItemCustomAdapter mAdapter = null;
     ArrayList<RecyclerItemCustom> mList = new ArrayList<RecyclerItemCustom>();
 
+    public static List<LostObject> detailList = new ArrayList<>();
+    public static boolean detail = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +52,11 @@ public class SearchActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        loadItem();
+        if(!detail)
+            loadItem();
+        else{
+            loadDetailItem();
+        }
 
 
 
@@ -142,6 +149,13 @@ public class SearchActivity extends AppCompatActivity {
     //리스트 내용 메인 카테고리와 서브 카테고리와 호선으로 불러오기
     public void loadItem(String mc, String sc, String l){
         new DBLoadCall().execute(mc, sc, l);
+    }
+
+    public void loadDetailItem(){
+        for(LostObject o : detailList){
+            addItem(o);
+        }
+        mAdapter.notifyDataSetChanged();
     }
 
     //리스트에 아이템 추가

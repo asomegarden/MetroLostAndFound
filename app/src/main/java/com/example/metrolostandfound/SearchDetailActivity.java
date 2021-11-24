@@ -4,11 +4,13 @@ package com.example.metrolostandfound;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -37,6 +39,8 @@ public class SearchDetailActivity extends AppCompatActivity {
     private String choice_line = "모두", choice_station ="모두";
     private String choice_big = "모두", choice_small = "모두";
 
+    private List<LostObject> tempList = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +49,6 @@ public class SearchDetailActivity extends AppCompatActivity {
         searchDetailDateTextView1 = (TextView) findViewById(R.id.searchDetailDateTextView1);
         searchDetailDateTextView2 = (TextView) findViewById(R.id.searchDetailDateTextView2);
         searchDetailTimeTextView1 = (TextView) findViewById(R.id.searchDetailTimeTextView1);
-        searchDetailTimeTextView2 = (TextView) findViewById(R.id.searchDetailTimeTextView2);
 
         List<String> defaultList = new ArrayList<>();
         defaultList.add("모두");
@@ -56,6 +59,25 @@ public class SearchDetailActivity extends AppCompatActivity {
         clear();
 
 
+        Button btnSearch = (Button) findViewById(R.id.btnSearch);
+
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String mc = choice_big;
+                String sc = choice_small;
+
+                if(mc.equals("모두")){
+                    new DBLoadCall().execute();
+                }else {
+                    if(sc.equals("모두")){
+                        new DBLoadCall().execute(mc, sc);
+                    }else{
+                        new DBLoadCall().execute(mc);
+                    }
+                }
+            }
+        });
 
         searchDetailDateTextView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,12 +99,6 @@ public class SearchDetailActivity extends AppCompatActivity {
             }
         });
 
-        searchDetailTimeTextView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showTime2();
-            }
-        });
 
         searchSpinnerLine.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -268,6 +284,83 @@ public class SearchDetailActivity extends AppCompatActivity {
         searchSpinnerStation.setAdapter(searchAdapterStation);
         searchSpinnerBig.setAdapter(searchAdapterBig);
         searchSpinnerSmall.setAdapter(searchAdapterSmall);
+    }
+
+    private class DBLoadCall extends AsyncTask<String, String, String> {
+
+        List<LostObject> objs = new ArrayList<>();
+        @Override
+        protected String doInBackground(String[] params) {
+            if(params.length == 0) {
+                objs.addAll(DBController.getItems());
+            }
+            else if(params.length == 1){
+                objs.addAll(DBController.getItems(params[0]));
+            }
+            else if(params.length == 2){
+                objs.addAll(DBController.getItems(params[0], params[1]));
+            }
+            else if(params.length == 3){
+                objs.addAll(DBController.getItems(params[0], params[1], params[2]));
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            LostObject o = new LostObject();
+            String line = new String();
+            if(!choice_line.equals("모두")){
+                line = choice_line;
+                if(choice_station.equals("모두")){
+                    o.setLine(choice_line);
+                    o.setStation(choice_station);
+                    o.setTrain(MetroSchedule.whatTrain(o));
+                }
+            }
+            if(line == null){
+                tempList.addAll(objs);
+            }else {
+                for (LostObject a : objs) {
+                    if (a.getLine().equals(line)) {
+                        if(o.getTrain() == null){
+                            tempList.add(a);
+                        }else {
+                            if(o.getTrain().equals(a.getTrain())) {
+                                tempList.add(a);
+                            }
+                        }
+                    }
+                }
+            }
+
+            SearchActivity.detailList.addAll(tempList);
+            SearchActivity.detail = true;
+
+            Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+            startActivity(intent);
+            onStop();
+        }
+    }
+
+    //리스트 내용 모두 불러오기
+    public void loadItem(){
+        new DBLoadCall().execute();
+    }
+
+    //리스트 내용 메인 카테고리로 불러오기
+    public void loadItem(String mc){
+        new DBLoadCall().execute(mc);
+    }
+
+    //리스트 내용 메인 카테고리와 서브 카테고리로 불러오기
+    public void loadItem(String mc, String sc){
+        new DBLoadCall().execute(mc, sc);
+    }
+
+    //리스트 내용 메인 카테고리와 서브 카테고리와 호선으로 불러오기
+    public void loadItem(String mc, String sc, String l){
+        new DBLoadCall().execute(mc, sc, l);
     }
 
     @Override
