@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.4395833333333333" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/radius_background.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/round.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/round_background.xml" value="0.22083333333333333" />
@@ -14,6 +15,32 @@
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/listview_item_custom.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/recycler_item_custom.xml" value="0.3770833333333333" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/xml/network_security_config.xml" value="0.2046875" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.440625" />
+        <entry key="app/src/main/res/drawable/round_background.xml" value="0.440625" />
+        <entry key="app/src/main/res/drawable/round_edit_text_background.xml" value="0.440625" />
+        <entry key="app/src/main/res/layout/activity_enroll.xml" value="0.31567028985507245" />
+        <entry key="app/src/main/res/layout/activity_enroll_Bag.xml" value="0.4666666666666667" />
+        <entry key="app/src/main/res/layout/activity_enroll_Tool.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/activity_enroll_Wallet.xml" value="0.360054347826087" />
+        <entry key="app/src/main/res/layout/activity_enroll_accessory.xml" value="0.31567028985507245" />
+        <entry key="app/src/main/res/layout/activity_enroll_bag.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/activity_enroll_book.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/activity_enroll_car.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/activity_enroll_card.xml" value="0.360054347826087" />
+        <entry key="app/src/main/res/layout/activity_enroll_cash.xml" value="0.360054347826087" />
+        <entry key="app/src/main/res/layout/activity_enroll_cloth.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/activity_enroll_electronics.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/activity_enroll_glasses.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_enroll_line.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/activity_enroll_main.xml" value="0.3908117111019819" />
+        <entry key="app/src/main/res/layout/activity_enroll_others.xml" value="0.36730072463768115" />
+        <entry key="app/src/main/res/layout/activity_enroll_paper.xml" value="0.360054347826087" />
+        <entry key="app/src/main/res/layout/activity_enroll_phone.xml" value="0.360054347826087" />
+        <entry key="app/src/main/res/layout/activity_enroll_pic.xml" value="0.36730072463768115" />
+        <entry key="app/src/main/res/layout/activity_enroll_tool.xml" value="0.360054347826087" />
+        <entry key="app/src/main/res/layout/activity_enroll_wallet.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/activity_enroll_ㅔㅑㅊ.xml" value="0.36730072463768115" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24427083333333333" />
       </map>
     </option>
   </component>

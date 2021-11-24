@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp">
+
+
+        <TextView
+            android:id="@+id/notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="습득하신 호선과 역 그리고"
+            android:textColor="@color/black"
+            android:textSize="24dp" />
+        <TextView
+            android:id="@+id/notice2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/notice"
+            android:text="습득하신 날짜와 시간을 알려주세요"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notice2"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="5dp"
+            android:inputType="number"
+            android:layout_marginLeft="100dp" />
+
+        <TextView
+            android:id="@+id/textLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notice2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="150dp"
+            android:text="호선"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:layout_toRightOf="@id/editLine"/>
+
+        <EditText
+            android:id="@+id/editStation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notice2"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/textLine" />
+        <TextView
+
+            android:id="@+id/textStation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notice2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="150dp"
+            android:text="역"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:layout_toRightOf="@id/editStation"/>
+
+        <EditText
+            android:id="@+id/editDate"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="400dp"
+            android:layout_marginEnd="90dp"
+            android:layout_marginBottom="85dp"
+            android:background="@drawable/round_edit_text_background"
+            android:hint=" 날짜와 시간을 입력해주세요"
+            android:inputType="datetime" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btn_Enroll"
+            android:text="다음으로"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

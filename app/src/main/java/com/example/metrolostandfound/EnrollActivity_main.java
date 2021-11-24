@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class EnrollActivity extends AppCompatActivity {
+public class EnrollActivity_main extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class EnrollActivity extends AppCompatActivity {
         Button btn_Wallet = (Button) findViewById(R.id.btn_Wallet);
         Button btn_Paper = (Button) findViewById(R.id.btn_Paper);
         Button btn_Cash = (Button) findViewById(R.id.btn_Cash);
+        Button btn_Card = (Button) findViewById(R.id.btn_Card);
         Button btn_Phone = (Button) findViewById(R.id.btn_Phone);
         Button btn_Etc = (Button) findViewById(R.id.btn_Etc);
 
@@ -129,6 +130,14 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), EnrollActivity_Cash.class);
+                startActivity(intent);
+                onStop();
+            }
+        });
+        btn_Card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),EnrollActivity_Card.class);
                 startActivity(intent);
                 onStop();
             }

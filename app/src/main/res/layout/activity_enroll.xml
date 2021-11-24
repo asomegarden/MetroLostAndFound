@@ -28,11 +28,12 @@
             android:textColor="@color/black"
             android:textSize="15dp"
             android:id="@+id/textName"/>
+
         <EditText
+            android:id="@+id/editName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/textName"
-            android:id="@+id/editName"/>
+            android:layout_toRightOf="@+id/textName" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

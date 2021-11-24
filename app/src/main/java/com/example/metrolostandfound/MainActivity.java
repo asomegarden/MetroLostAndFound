@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btnGoEnroll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
+                Intent intent = new Intent(getApplicationContext(), EnrollActivity_main.class);
                 startActivity(intent);
                 onStop();
             }
