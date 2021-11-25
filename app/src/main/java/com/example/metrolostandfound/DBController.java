@@ -27,7 +27,11 @@ import retrofit2.http.QueryMap;
 public class DBController {
     public static List<LostObject> objects;
     public static LostObject singleObject;
-    private static boolean loading;
+    
+    //이제 리턴해주는 형식이 아니라 변수에 저장해놓은 후 리프레시 할 때마다 불러오게
+    //동기 처리 문제가 있어서 결국 이렇게 했음
+    //DBController.objects 는 리스트
+    //DBController.singleObject 는 단일 객체
 
     static {
         singleObject = new LostObject();
@@ -151,7 +155,6 @@ public class DBController {
                 if(response.isSuccessful()) {
                     singleObject = new LostObject(response.body());
 
-                    loading = false;
                 }else {
                     Log.d("get 에러", response.message());
                 }
