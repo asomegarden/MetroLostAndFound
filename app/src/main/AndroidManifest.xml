@@ -35,6 +35,7 @@
         <activity android:name=".SearchActivity" />
         <activity android:name=".SettingActivity"/>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".CopyrightActivity"/>
         <activity android:name=".ObjectViewActivity"
             android:exported="true">
             <intent-filter>

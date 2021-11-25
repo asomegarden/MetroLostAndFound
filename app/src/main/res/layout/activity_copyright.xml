@@ -4,52 +4,42 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical">
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="환경설정"
-        android:textSize="30dp"
         android:background="@drawable/round_background"
-        android:textColor="@color/white"
-        android:gravity="center"
         android:layout_margin="10dp"
-        android:layout_alignParentTop="true"
-        android:id="@+id/searchTextView"/>
+        android:id="@+id/settingRelativeLayout">\
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="환경설정"
+            android:textSize="30dp"
+            android:background="@drawable/round_background"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_alignParentTop="true"/>
+
+        <ImageView
+            android:id="@+id/copyrightBackImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/searchTextView"
+        android:layout_below="@+id/settingRelativeLayout"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/gray">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerInParent="true"
-                android:text="버전 정보"
-                android:textStyle="bold"
-                android:layout_marginLeft="8dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:text="0.0.1(beta)"
-                android:layout_marginRight="8dp"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
             android:background="@color/gray"
-            android:layout_marginTop="10dp"
             android:id="@+id/copyrightRelativeLayout"
             >
 
@@ -61,14 +51,31 @@
                 android:text="제공"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:text="보기   "
-                android:layout_marginRight="8dp"/>
-        </RelativeLayout>
+                android:text="수인분당선\n시간표"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="https://www.letskorail.com/ebizcom/cs/guide/guide/guide11.do - 레츠코레일 열차시간 운임포 - 수인분당선 시간표"
+                android:gravity="center"
+                android:textSize="12dp"
+                />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -123,6 +130,7 @@
             android:gravity="center"
             android:id="@+id/settingSettingTextView"
             />
+
 
     </LinearLayout>
 </RelativeLayout>

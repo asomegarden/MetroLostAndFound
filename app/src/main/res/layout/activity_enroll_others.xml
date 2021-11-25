@@ -63,8 +63,7 @@
                 android:maxHeight="200dp"
                 android:layout_marginTop="120dp"
                 android:adjustViewBounds="true"
-                android:src="@drawable/round_edit_text_background"
-                android:onClick="onClick"/>
+                android:src="@drawable/round_edit_text_background"/>
 
             <Button
 
