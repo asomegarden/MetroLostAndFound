@@ -60,6 +60,38 @@ public class ObjectViewActivity extends AppCompatActivity {
             }
         });
 
+        //region Activity 이동
+        TextView searchHomeTextView = (TextView) findViewById(R.id.productDetailHomeTextView);
+        TextView searchAddTextView = (TextView) findViewById(R.id.productDetailAddTextView);
+        TextView searchSettingTextView = (TextView) findViewById(R.id.productDetailSettingTextView);
+        searchHomeTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                onStop();
+            }
+        });
+
+        searchAddTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
+                startActivity(intent);
+                onStop();
+            }
+        });
+
+        searchSettingTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
+                startActivity(intent);
+                onStop();
+            }
+        });
+        //endregion
+
 
     }
 
@@ -91,8 +123,8 @@ public class ObjectViewActivity extends AppCompatActivity {
 
             if(printObject.getDateTime() != null) {
                 String[] dateAndTime = printObject.getDateTime().split(":");
-                objectDateTextView.setText(dateAndTime[0]);
-                objectTimeTextView.setText(dateAndTime[1]);
+                objectDateTextView.setText(dateAndTime[0] + "년 " + dateAndTime[1] + "월 " + dateAndTime[2] + "일");
+                objectTimeTextView.setText(String.format("%02d", Integer.parseInt(dateAndTime[3])) + " : " + String.format("%02d", Integer.parseInt(dateAndTime[4])) + " ");
             }
 
             objectLineTextView.setText(printObject.getLine());

@@ -59,10 +59,7 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        TextView searchHomeTextView = (TextView) findViewById(R.id.searchHomeTextView);
-        TextView searchAddTextView = (TextView) findViewById(R.id.searchAddTextView);
-        TextView searchSettingTextView = (TextView) findViewById(R.id.searchSettingTextView);
-        ImageView searchImageView = (ImageView) findViewById(R.id.searchImageView);
+
 
         layoutResult = (RelativeLayout) findViewById(R.id.layout_result);
         layoutDetail = (RelativeLayout) findViewById(R.id.layout_detail);
@@ -77,6 +74,10 @@ public class SearchActivity extends AppCompatActivity {
         loadItem();
 
         //region Activity 이동
+        TextView searchHomeTextView = (TextView) findViewById(R.id.searchHomeTextView);
+        TextView searchAddTextView = (TextView) findViewById(R.id.searchAddTextView);
+        TextView searchSettingTextView = (TextView) findViewById(R.id.searchSettingTextView);
+        ImageView searchImageView = (ImageView) findViewById(R.id.searchImageView);
         searchHomeTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,6 +108,7 @@ public class SearchActivity extends AppCompatActivity {
         searchImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clear();
                 layoutDetail.setVisibility(View.VISIBLE);
                 layoutResult.setVisibility(View.GONE);
             }
@@ -152,8 +154,6 @@ public class SearchActivity extends AppCompatActivity {
                         loadItem(mc, sc);
                     }
                 }
-
-                clear();
 
                 layoutResult.setVisibility(View.VISIBLE);
                 layoutDetail.setVisibility(View.GONE);
@@ -240,7 +240,6 @@ public class SearchActivity extends AppCompatActivity {
             }
         }, cal.get(Calendar.HOUR), cal.get(Calendar.MINUTE), false);
 
-        //dialog.setTitle();
         dialog.show();
     }
 
@@ -313,8 +312,10 @@ public class SearchActivity extends AppCompatActivity {
                 lo.setTrain(MetroSchedule.whatTrain(lo));
 
                 for (LostObject o : DBController.objects) {
-                    if(o.getTrain().equals(lo.getTrain())){
-                        addItem(o);
+                    if(o.getTrain()!= null) {
+                        if (o.getTrain().equals(lo.getTrain())) {
+                            addItem(o);
+                        }
                     }
                 }
             }

@@ -13,7 +13,7 @@ public class EnrollActivity_Glasses extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enroll);
+        setContentView(R.layout.activity_enroll_glasses);
 
         Button btn_Glasses2 = (Button) findViewById(R.id.btn_Glasses2);
         Button btn_Sunglasses = (Button) findViewById(R.id.btn_Sunglasses);
@@ -40,7 +40,7 @@ public class EnrollActivity_Glasses extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
                 intent.putExtra("mc","안경");
-                intent.putExtra("sc","선글라");
+                intent.putExtra("sc","선글라스");
                 startActivity(intent);
                 onStop();
             }
@@ -52,7 +52,7 @@ public class EnrollActivity_Glasses extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
                 intent.putExtra("mc","안경");
-                intent.putExtra("sc","콘텍트렌");
+                intent.putExtra("sc","콘텍트렌즈");
                 startActivity(intent);
                 onStop();
             }

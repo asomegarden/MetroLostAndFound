@@ -60,6 +60,7 @@ public class LostObject implements Cloneable
         this.station = o.station;
         this.main_category = o.main_category;
         this.image = o.image;
+        this.train = o.train;
 
         this.id = o.id;
         this.published_at = o.published_at;
@@ -109,7 +110,7 @@ public class LostObject implements Cloneable
     @Override
     public String toString()
     {
-        return "LostObject [item_id = "+passwd+", sub_category = "+sub_category+", line = "+line+", created_at = "+created_at+", storage = "+storage+", date_time = "+date_time+", updated_at = "+updated_at+", contents = "+contents+", station = "+station+", main_category = "+main_category+", id = "+id+", published_at = "+published_at+", image = "+image+"]";
+        return "LostObject [passwd = "+passwd+", train = "+train+", sub_category = "+sub_category+", line = "+line+", created_at = "+created_at+", storage = "+storage+", date_time = "+date_time+", updated_at = "+updated_at+", contents = "+contents+", station = "+station+", main_category = "+main_category+", id = "+id+", published_at = "+published_at+", image = "+image+"]";
     }
 
     //이 밑의 항목들은 따로 지정해주지 않아도 DB에서 알아서 지정, 읽을 때만 있으면 됨
