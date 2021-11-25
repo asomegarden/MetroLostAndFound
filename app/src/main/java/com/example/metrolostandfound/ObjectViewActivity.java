@@ -1,9 +1,14 @@
 package com.example.metrolostandfound;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +20,9 @@ import java.util.List;
 public class ObjectViewActivity extends AppCompatActivity {
     private LostObject printObject;
 
-    TextView test;
+    TextView objectMcTextView, objectScTextView, objectDateTextView, objectTimeTextView, objectLineTextView, objectStationTextView, objectLocTextView, objectDetailTextView;
+    ImageView objectImageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,10 +30,40 @@ public class ObjectViewActivity extends AppCompatActivity {
 
         loadItem();
 
-        test = (TextView) findViewById(R.id.test_text);
+        objectImageView = (ImageView) findViewById(R.id.objectImageView);
+        objectMcTextView = (TextView) findViewById(R.id.objectMcTextView);
+        objectScTextView = (TextView) findViewById(R.id.objectScTextView);
+        objectDateTextView = (TextView) findViewById(R.id.objectDateTextView);
+        objectTimeTextView = (TextView) findViewById(R.id.objectTimeTextView);
+        objectLineTextView = (TextView) findViewById(R.id.objectLineTextView);
+        objectStationTextView = (TextView) findViewById(R.id.objectStationTextView);
+        objectDetailTextView = (TextView) findViewById(R.id.objectDetailTextView);
+
+
+        ImageView btnRefresh = (ImageView) findViewById(R.id.refresh);
+        ImageView btnBack = (ImageView) findViewById(R.id.searchBackImageView);
+
+
+        btnRefresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                refreshItem();
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                startActivity(intent);
+                onStop();
+            }
+        });
 
 
     }
+
+
 
     private void loadItem(){
         Intent intent = getIntent();
@@ -36,8 +73,32 @@ public class ObjectViewActivity extends AppCompatActivity {
         }
     }// 불러와서 printObject에 저장
 
+    private void refreshItem(){
+        printItem();
+    }
+
     private void printItem(){
-        test.setText(printObject.toString());
+        printObject = DBController.singleObject;
+        if(printObject != null){
+
+
+            if(printObject.getImage() == null){
+                printObject.setImage(BitmapFactory.decodeResource(getResources(), R.drawable.search));
+            }
+            objectImageView.setImageBitmap(printObject.getImage());
+            objectMcTextView.setText(printObject.getMainCategory());
+            objectScTextView.setText(printObject.getSubCategory());
+
+            if(printObject.getDateTime() != null) {
+                String[] dateAndTime = printObject.getDateTime().split(":");
+                objectDateTextView.setText(dateAndTime[0]);
+                objectTimeTextView.setText(dateAndTime[1]);
+            }
+
+            objectLineTextView.setText(printObject.getLine());
+            objectStationTextView.setText(printObject.getStation());
+            objectDetailTextView.setText(printObject.getContents());
+        }
     }//printObject에 저장이 완료되면 TextView 같은 곳에 오브젝트 내용을 쓴다.
     //그니까 printObject 쓰는 건 여기서 다 해야한다 다른 곳에서는 에러 뜰 수 있다
     private class DBLoadCall extends AsyncTask<Integer, String, String> {
