@@ -91,8 +91,8 @@ public class ObjectViewActivity extends AppCompatActivity {
 
             if(printObject.getDateTime() != null) {
                 String[] dateAndTime = printObject.getDateTime().split(":");
-                objectDateTextView.setText(dateAndTime[0]);
-                objectTimeTextView.setText(dateAndTime[1]);
+                objectDateTextView.setText(dateAndTime[0] + "/" + dateAndTime[1] + "/" + dateAndTime[2]);
+                objectTimeTextView.setText(dateAndTime[3] + ":" + dateAndTime[4]);
             }
 
             objectLineTextView.setText(printObject.getLine());

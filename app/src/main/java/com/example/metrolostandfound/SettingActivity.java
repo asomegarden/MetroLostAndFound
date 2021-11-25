@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,9 +16,20 @@ public class SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
+        RelativeLayout copyrightRelativeLayout = (RelativeLayout) findViewById(R.id.copyrightRelativeLayout);
+
         TextView settingHomeTextView = (TextView) findViewById(R.id.settingHomeTextView);
         TextView settingAddTextView = (TextView) findViewById(R.id.settingAddTextView);
         TextView settingSearchTextView = (TextView) findViewById(R.id.settingSearchTextView);
+
+        copyrightRelativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CopyrightActivity.class);
+                startActivity(intent);
+                onStop();
+            }
+        });
 
         settingHomeTextView.setOnClickListener(new View.OnClickListener() {
             @Override

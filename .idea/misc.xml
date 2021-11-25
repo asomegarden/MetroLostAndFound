@@ -3,20 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/radius_background.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/round.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/round_background.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/round_edit_text_background.xml" value="0.3074074074074074" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_enroll.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
-        <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_object_view.xml" value="0.2046875" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_search.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_search_detail.xml" value="0.2554347826086957" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_search_result.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/listview_item_custom.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/recycler_item_custom.xml" value="0.3770833333333333" />
-        <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/search_detail_dialog.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/riris/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/xml/network_security_config.xml" value="0.2046875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2171875" />
@@ -29,11 +25,15 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/ic_metro_icon_background.xml" value="0.2171875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/round_background.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/drawable/round_edit_text_background.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_copyright.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_enroll.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_enroll_line.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_enroll_others.xml" value="0.2604166666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_enroll_tool.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_intro.xml" value="0.1661600810536981" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_object_view.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_object_view.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_product_detail.xml" value="0.33016304347826086" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_search.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_search_detail.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MetroLostAndFound/app/src/main/res/layout/activity_search_result.xml" value="0.25" />
@@ -44,7 +44,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
