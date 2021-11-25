@@ -227,6 +227,18 @@ public class SearchActivity extends AppCompatActivity {
 
             }
         });
+
+        searchSpinnerSmall.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                choice_small = searchAdapterSmall.getItem(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     private void showTime1() {

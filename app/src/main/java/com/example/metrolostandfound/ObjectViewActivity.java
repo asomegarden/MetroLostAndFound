@@ -45,7 +45,7 @@ public class ObjectViewActivity extends AppCompatActivity {
         objectLineTextView = (TextView) findViewById(R.id.objectLineTextView);
         objectStationTextView = (TextView) findViewById(R.id.objectStationTextView);
         objectDetailTextView = (TextView) findViewById(R.id.objectDetailTextView);
-
+        objectLocTextView = (TextView) findViewById(R.id.objectLocTexttView);
 
         ImageView btnRefresh = (ImageView) findViewById(R.id.refresh);
         ImageView btnBack = (ImageView) findViewById(R.id.searchBackImageView);
@@ -172,6 +172,7 @@ public class ObjectViewActivity extends AppCompatActivity {
 
             objectLineTextView.setText(printObject.getLine());
             objectStationTextView.setText(printObject.getStation());
+            objectLocTextView.setText(printObject.getStorage());
             objectDetailTextView.setText(printObject.getContents());
         }
     }//printObject에 저장이 완료되면 TextView 같은 곳에 오브젝트 내용을 쓴다.
