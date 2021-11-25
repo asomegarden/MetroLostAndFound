@@ -25,7 +25,7 @@ public class EnrollActivity_PW extends AppCompatActivity {
                 String Password = password.getText().toString();
                 Toast.makeText(getApplicationContext(), "등록 시작", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
-                intent.putExtra("password", Password);
+                intent.putExtra("pw", Password);
                 startActivity(intent);
                 onStop();
             }

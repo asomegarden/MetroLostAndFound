@@ -28,6 +28,8 @@ public class EnrollActivity_Cash extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","현금");
                 intent.putExtra("sc","수표");
                 startActivity(intent);
@@ -40,6 +42,8 @@ public class EnrollActivity_Cash extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","현금");
                 intent.putExtra("sc","수표");
                 startActivity(intent);
@@ -52,6 +56,8 @@ public class EnrollActivity_Cash extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","현금");
                 intent.putExtra("sc","외화");
                 startActivity(intent);
@@ -64,6 +70,8 @@ public class EnrollActivity_Cash extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","현금");
                 intent.putExtra("sc","기타");
                 startActivity(intent);
@@ -76,6 +84,8 @@ public class EnrollActivity_Cash extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","현금");
                 intent.putExtra("sc","상품권");
                 startActivity(intent);

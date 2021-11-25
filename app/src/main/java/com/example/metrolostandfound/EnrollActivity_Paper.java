@@ -27,6 +27,8 @@ public class EnrollActivity_Paper extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","증명서");
                 intent.putExtra("sc","신분증");
                 startActivity(intent);
@@ -39,6 +41,8 @@ public class EnrollActivity_Paper extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","증명서");
                 intent.putExtra("sc","면허");
                 startActivity(intent);
@@ -51,6 +55,8 @@ public class EnrollActivity_Paper extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","증명서");
                 intent.putExtra("sc","여권");
                 startActivity(intent);
@@ -63,6 +69,8 @@ public class EnrollActivity_Paper extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","증명서");
                 intent.putExtra("sc","기타");
                 startActivity(intent);

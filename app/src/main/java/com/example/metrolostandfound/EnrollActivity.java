@@ -39,6 +39,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), EnrollActivity_Bag.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -47,6 +49,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Acc.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -55,6 +59,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Book.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -63,6 +69,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Glasses.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
 
@@ -72,6 +80,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Tool.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -80,6 +90,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","스포츠용품");
                 intent.putExtra("sc","스포츠용품");
                 startActivity(intent);
@@ -90,6 +102,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Clothes.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -98,6 +112,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Car.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -106,6 +122,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Electronics.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -114,6 +132,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Wallet.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -122,6 +142,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Paper.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -130,6 +152,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), EnrollActivity_Cash.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -138,6 +162,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Card.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -146,6 +172,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Phone.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 startActivity(intent);
                 onStop();
             }
@@ -154,6 +182,8 @@ public class EnrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","기타용품");
                 intent.putExtra("sc","기타용품");
                 startActivity(intent);

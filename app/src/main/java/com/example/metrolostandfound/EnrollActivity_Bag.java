@@ -30,6 +30,8 @@ public class EnrollActivity_Bag extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","가방");
                 intent.putExtra("sc","백팩");
                 startActivity(intent);
@@ -42,6 +44,8 @@ public class EnrollActivity_Bag extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","가방");
                 intent.putExtra("sc","핸드백/숄더백/메신저");
                 startActivity(intent);
@@ -54,6 +58,8 @@ public class EnrollActivity_Bag extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","가방");
                 intent.putExtra("sc","클러치백");
                 startActivity(intent);
@@ -66,6 +72,8 @@ public class EnrollActivity_Bag extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","가방");
                 intent.putExtra("sc","캐리어");
                 startActivity(intent);
@@ -78,6 +86,8 @@ public class EnrollActivity_Bag extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","가방");
                 intent.putExtra("sc","파우치");
                 startActivity(intent);
@@ -90,6 +100,8 @@ public class EnrollActivity_Bag extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","가방");
                 intent.putExtra("sc","에코백");
                 startActivity(intent);
@@ -102,6 +114,8 @@ public class EnrollActivity_Bag extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","가방");
                 intent.putExtra("sc","쇼핑백");
                 startActivity(intent);
@@ -114,6 +128,8 @@ public class EnrollActivity_Bag extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","가방");
                 intent.putExtra("sc","기타");
                 startActivity(intent);

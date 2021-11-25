@@ -27,6 +27,8 @@ public class EnrollActivity_Glasses extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","안경");
                 intent.putExtra("sc","안경");
                 startActivity(intent);
@@ -39,6 +41,8 @@ public class EnrollActivity_Glasses extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","안경");
                 intent.putExtra("sc","선글라스");
                 startActivity(intent);
@@ -51,6 +55,8 @@ public class EnrollActivity_Glasses extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","안경");
                 intent.putExtra("sc","콘텍트렌즈");
                 startActivity(intent);
@@ -63,6 +69,8 @@ public class EnrollActivity_Glasses extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","안경");
                 intent.putExtra("sc","기타");
                 startActivity(intent);

@@ -25,6 +25,8 @@ public class EnrollActivity_Wallet extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","지갑");
                 intent.putExtra("sc","여성용지갑");
                 startActivity(intent);
@@ -37,6 +39,8 @@ public class EnrollActivity_Wallet extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","지갑");
                 intent.putExtra("sc","남성용지갑");
                 startActivity(intent);
@@ -49,6 +53,8 @@ public class EnrollActivity_Wallet extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "감사합니다 2/4", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
+                Intent intent2 = getIntent();
+                intent.putExtra("pw",intent2.getStringExtra("pw"));
                 intent.putExtra("mc","지갑");
                 intent.putExtra("sc","기타");
                 startActivity(intent);
