@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         btnGoEnroll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
+                Intent intent = new Intent(getApplicationContext(), EnrollActivity_PW.class);
                 startActivity(intent);
                 onStop();
             }
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         mainAddTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
+                Intent intent = new Intent(getApplicationContext(), EnrollActivity_PW.class);
                 startActivity(intent);
                 onStop();
             }

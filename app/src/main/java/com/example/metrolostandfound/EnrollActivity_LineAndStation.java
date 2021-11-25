@@ -114,7 +114,7 @@ public class EnrollActivity_LineAndStation extends AppCompatActivity {
                 String day = year + ":" + month + ":" + date + ":" + hour + ":" + minute;
                 String line = choice_line;
                 String station = choice_station;
-
+                intent2.putExtra("pw",intent.getStringExtra("pw"));
                 intent2.putExtra("station", station);
                 intent2.putExtra("date",day);
                 intent2.putExtra("line",line);

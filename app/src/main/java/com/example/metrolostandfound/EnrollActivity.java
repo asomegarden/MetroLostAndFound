@@ -38,6 +38,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Bag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), EnrollActivity_Bag.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -48,6 +49,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Acc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Acc.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -58,6 +60,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Book.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -68,6 +71,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Glasses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Glasses.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -79,6 +83,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Tool.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Tool.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -89,6 +94,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Sport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -101,6 +107,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Cloth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Clothes.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -111,6 +118,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Car.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Car.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -121,6 +129,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Elect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Electronics.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -131,6 +140,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Wallet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Wallet.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -141,6 +151,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Paper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Paper.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -151,6 +162,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Cash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), EnrollActivity_Cash.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -161,6 +173,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Card.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -171,6 +184,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_Phone.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
@@ -181,6 +195,7 @@ public class EnrollActivity extends AppCompatActivity {
         btn_Etc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "감사합니다 1/4", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),EnrollActivity_LineAndStation.class);
                 Intent intent2 = getIntent();
                 intent.putExtra("pw",intent2.getStringExtra("pw"));
