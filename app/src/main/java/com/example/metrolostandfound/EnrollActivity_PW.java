@@ -23,11 +23,16 @@ public class EnrollActivity_PW extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String Password = password.getText().toString();
-                Toast.makeText(getApplicationContext(), "등록 시작", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
-                intent.putExtra("pw", Password);
-                startActivity(intent);
-                onStop();
+                if(Password.equals("")){
+                    Toast.makeText(getApplicationContext(), "비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "등록 시작", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), EnrollActivity.class);
+                    DBController.passwdTemp = Password;
+                    startActivity(intent);
+                    onStop();
+                }
             }
         });
     }

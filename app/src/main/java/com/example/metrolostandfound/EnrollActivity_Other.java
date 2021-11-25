@@ -64,6 +64,7 @@ public class EnrollActivity_Other extends AppCompatActivity {
                 newObj.setLine(intent.getStringExtra("line"));
                 newObj.setStation(intent.getStringExtra("station"));
                 newObj.setDateTime(intent.getStringExtra("date"));
+                newObj.setPasswd(DBController.passwdTemp);
                 newObj.setStorage(editStorage.getText().toString());
                 newObj.setContents(editMemo.getText().toString());
                 newObj.setImage(choice_img);

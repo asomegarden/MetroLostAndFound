@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:id="@+id/edt_passwd"
+        android:gravity="center_horizontal"
         android:hint="등록할 때 입력한 비밀번호"/>
 
 </LinearLayout>
