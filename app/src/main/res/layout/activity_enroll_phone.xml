@@ -55,7 +55,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_marginRight="10dp"
                 android:text="삼성 휴대폰" />
 
@@ -66,7 +65,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_marginRight="10dp"
                 android:text="LG 휴대폰" />
 
@@ -77,7 +75,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_marginRight="10dp"
                 android:text="아이폰" />
 
@@ -88,7 +85,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_marginRight="10dp"
                 android:text="피쳐폰" />
 
@@ -109,7 +105,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_marginRight="15dp"
                 android:text="케이스" />
 
@@ -121,7 +116,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:text="충전기" />
 
             <Button
@@ -131,7 +125,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_marginLeft="15dp"
                 android:text="기타" />
 

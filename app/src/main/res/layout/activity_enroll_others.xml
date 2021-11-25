@@ -75,7 +75,6 @@
                 android:background="@drawable/round_background"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:text="사진 선택"
                 android:onClick="onClick"
                 />
@@ -125,16 +124,15 @@
             android:padding="10dp"/>
 
         <Button
+            android:id="@+id/btn_Enroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:background="@drawable/round_background"
-            android:textColor="@color/white"
-            android:textSize="16dp"
-            android:textStyle="bold"
             android:layout_alignParentBottom="true"
-            android:id="@+id/btn_Enroll"
-            android:text="등록"/>
+            android:background="@drawable/round_background"
+            android:gravity="center"
+            android:text="등록"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
 
 
     </RelativeLayout>

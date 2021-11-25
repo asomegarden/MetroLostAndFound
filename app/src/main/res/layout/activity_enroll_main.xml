@@ -40,7 +40,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="가방" />
 
@@ -51,7 +50,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="도서" />
 
@@ -62,7 +60,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="안경" />
 
@@ -80,7 +77,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="공구" />
             <Button
@@ -90,7 +86,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="스포츠 용품" />
             <Button
@@ -100,7 +95,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="의류" />
 
@@ -111,7 +105,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="자동차" />
         </LinearLayout>
@@ -129,7 +122,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="전자기기" />
             <Button
@@ -139,7 +131,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="지갑" />
             <Button
@@ -149,7 +140,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="증명서" />
             <Button
@@ -159,7 +149,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="현금" />
 
@@ -178,7 +167,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:text="카드" />
 
             <Button
@@ -188,7 +176,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="휴대폰" />
 
@@ -199,7 +186,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="기타 용품" />
             <Button

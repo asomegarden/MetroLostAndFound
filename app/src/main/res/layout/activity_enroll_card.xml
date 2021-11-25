@@ -55,7 +55,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_marginRight="20dp"
                 android:text="신용(체크)카드" />
             <Button
@@ -64,7 +63,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_height="wrap_content"
                 android:text="교통카드" />
 
@@ -75,7 +73,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_marginLeft="20dp"
                 android:text="기타" />
 

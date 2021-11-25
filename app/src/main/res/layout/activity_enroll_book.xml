@@ -21,7 +21,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:text="도서군요!"
-            android:textColor="@color/korailBlue"
+            android:textColor="@color/black"
             android:textSize="24dp"
             android:gravity="center"/>
         <TextView
@@ -35,7 +35,7 @@
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/notice"
             android:text="어떤 종류인가요??"
-            android:textColor="@color/korailBlue"
+            android:textColor="@color/black"
             android:textSize="24dp"
             android:gravity="center"/>
 
@@ -55,7 +55,7 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
+
                 android:layout_marginRight="20dp"
                 android:text="도서" />
 
@@ -66,7 +66,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_marginLeft="20dp"
                 android:text="잡지" />
 
@@ -90,7 +89,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_marginRight="20dp"
                 android:text="서류" />
 
@@ -101,7 +99,6 @@
                 android:background="@drawable/button_shape"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"
                 android:layout_marginLeft="20dp"
                 android:text="기타" />
 

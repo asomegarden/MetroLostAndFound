@@ -56,8 +56,7 @@
                 android:textColor="@color/black"
                 android:gravity="end"
                 android:text="호선:"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20dp" />
 
             <Spinner
                 android:id="@+id/enrollLineSpinner"
@@ -85,8 +84,7 @@
                 android:gravity="end"
                 android:textColor="@color/black"
                 android:text="역:"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20dp" />
 
             <Spinner
                 android:id="@+id/enrollStationSpinner"
@@ -115,8 +113,7 @@
                 android:gravity="end"
                 android:textColor="@color/black"
                 android:text="날짜:"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/enrollDateTextView"
@@ -128,8 +125,7 @@
                 android:gravity="center"
                 android:text="  2021 - 12 - 01  "
                 android:textSize="25dp"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -148,8 +144,7 @@
                 android:textColor="@color/black"
                 android:gravity="end"
                 android:text="시간:"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/enrollTimeTextView"
@@ -161,21 +156,19 @@
                 android:background="@drawable/round_background"
                 android:textColor="@color/white"
                 android:text="  PM  1 0  :  0  0  "
-                android:textSize="25dp"
-                android:textStyle="bold" />
+                android:textSize="25dp" />
         </LinearLayout>
 
         <Button
             android:id="@+id/btn_Enroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/round_background"
-            android:textColor="@color/white"
-            android:textSize="16dp"
-            android:textStyle="bold"
             android:layout_alignParentBottom="true"
+            android:background="@drawable/round_background"
             android:gravity="center"
-            android:text="다음으로" />
+            android:text="다음으로"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
     </RelativeLayout>
 
 
