@@ -1,16 +1,23 @@
 package com.example.metrolostandfound;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.ParseException;
@@ -91,6 +98,42 @@ public class ObjectViewActivity extends AppCompatActivity {
             }
         });
         //endregion
+
+        Button btnDelete = (Button) findViewById(R.id.btnDelete);
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View dialogView = (View) View.inflate(ObjectViewActivity.this, R.layout.passwd_input_dialog, null);
+                AlertDialog.Builder dlg = new AlertDialog.Builder(ObjectViewActivity.this);
+
+                dlg.setTitle("사용자 정보 입력");
+                dlg.setView(dialogView);
+
+                dlg.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        EditText et = (EditText) dialogView.findViewById(R.id.edt_passwd);
+
+                        if(et.getText().toString().equals(printObject.getPasswd())){
+                            DBController.deleteItem(Integer.parseInt(printObject.getId()));
+                            Toast.makeText(ObjectViewActivity.this, "삭제됨", Toast.LENGTH_SHORT).show();
+
+                            Intent intent = new Intent(ObjectViewActivity.this, SearchActivity.class);
+                            startActivity(intent);
+                            onStop();
+                        }
+                        else {
+                            Toast.makeText(ObjectViewActivity.this, "잘못된 비밀번호", Toast.LENGTH_SHORT).show();
+                            et.setText("");
+                        }
+                    }
+                });
+                dlg.setNegativeButton("취소", null);
+
+                dlg.show();
+            }
+        });
 
 
     }
