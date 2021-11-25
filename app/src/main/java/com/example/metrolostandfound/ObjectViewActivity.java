@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,4 +53,21 @@ public class ObjectViewActivity extends AppCompatActivity {
             printItem();
         }
     } //동기 처리
+    //날짜 입력칸이 왜 두개인건가요??
+    public int Compare_Date(String Date1, String Date2,String Date3) throws ParseException { //날짜,시간 비교
+        Date1 = Date1.replaceAll(" /:",""); //검색페이지 날짜,시간
+        int day1 = Integer.parseInt(Date1);
+        Date2 = Date1.replaceAll(" /:",""); //검색페이지 날짜,시간
+        int day2 = Integer.parseInt(Date1);
+        Date3 = Date1.replaceAll(" /:",""); //등록된 날짜,시간
+        int day3 = Integer.parseInt(Date1);
+        if(day3>=day1) {
+            if (day2 >= day3)
+            return 1; //만족하는 날짜
+            else
+                return 0;//조건을 만족하지 못할때
+        } else
+            return 0; //조건을 만족하지 못할때
+
+    }
 }
