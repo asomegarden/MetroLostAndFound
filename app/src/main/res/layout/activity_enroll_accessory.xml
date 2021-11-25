@@ -22,7 +22,7 @@
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="악세서리군요!"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp" />
         <TextView
             android:id="@+id/notice2"
@@ -35,7 +35,7 @@
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/notice"
             android:text="어떤 종류인가요??"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp"
             android:gravity="center"/>
 
@@ -52,6 +52,10 @@
                 android:id="@+id/btn_Ring"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:layout_marginRight="15dp"
                 android:text="반지" />
 
@@ -59,12 +63,20 @@
                 android:id="@+id/btn_Neck"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:text="목걸이" />
 
             <Button
                 android:id="@+id/btn_Ear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:layout_marginLeft="15dp"
                 android:text="귀걸이" />
 
@@ -81,12 +93,20 @@
                 android:id="@+id/btn_Watch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:layout_marginRight="30dp"
                 android:text="시계" />
             <Button
                 android:id="@+id/btn_Else"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:layout_marginRight="10dp"
                 android:text="기타" />
         </RadioGroup>

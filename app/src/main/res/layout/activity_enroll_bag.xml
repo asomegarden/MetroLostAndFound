@@ -21,7 +21,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:text="가방이군요!"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp"
             android:gravity="center"/>
         <TextView
@@ -35,7 +35,7 @@
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/notice"
             android:text="어떤 종류인가요??"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp"
             android:gravity="center"/>
 
@@ -53,6 +53,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:text="백팩" />
 
             <Button
@@ -60,6 +64,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:text="핸드/숄더백" />
 
             <Button
@@ -67,6 +75,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:text="클러치백" />
 
             <Button
@@ -74,6 +86,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:text="캐리어" />
 
         </RadioGroup>
@@ -91,6 +107,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:text="파우치" />
 
             <Button
@@ -98,6 +118,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:text="에코백" />
 
             <Button
@@ -105,6 +129,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:text="쇼핑백" />
 
             <Button
@@ -112,6 +140,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:text="기타" />
 
         </RadioGroup>

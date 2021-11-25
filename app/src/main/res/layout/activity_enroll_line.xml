@@ -23,7 +23,7 @@
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="습득하신 호선과 역 그리고"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp" />
         <TextView
             android:id="@+id/notice2"
@@ -36,7 +36,7 @@
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/notice"
             android:text="습득하신 날짜와 시간을 알려주세요"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp"
             android:gravity="center"/>
 
@@ -53,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
+                android:textColor="@color/black"
                 android:gravity="end"
                 android:text="호선:"
                 android:textSize="20dp"
@@ -82,6 +83,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:gravity="end"
+                android:textColor="@color/black"
                 android:text="역:"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -111,6 +113,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:gravity="end"
+                android:textColor="@color/black"
                 android:text="날짜:"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -121,10 +124,11 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="25dp"
-                android:background="@color/gray"
+                android:background="@drawable/round_background"
                 android:gravity="center"
                 android:text="  2021 - 12 - 01  "
                 android:textSize="25dp"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -141,6 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
+                android:textColor="@color/black"
                 android:gravity="end"
                 android:text="시간:"
                 android:textSize="20dp"
@@ -152,8 +157,9 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="25dp"
-                android:background="@color/gray"
                 android:gravity="center"
+                android:background="@drawable/round_background"
+                android:textColor="@color/white"
                 android:text="  PM  1 0  :  0  0  "
                 android:textSize="25dp"
                 android:textStyle="bold" />
@@ -163,6 +169,10 @@
             android:id="@+id/btn_Enroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/round_background"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
             android:layout_alignParentBottom="true"
             android:gravity="center"
             android:text="다음으로" />
