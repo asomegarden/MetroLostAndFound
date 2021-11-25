@@ -21,7 +21,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:text="현금이군요!"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp"
             android:gravity="center"/>
         <TextView
@@ -35,7 +35,7 @@
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/notice"
             android:text="어떤 종류인가요??"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp"
             android:gravity="center"/>
 
@@ -52,6 +52,9 @@
                 android:id="@+id/btn_Cash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginRight="15dp"
                 android:text="현금" />
 
@@ -59,12 +62,18 @@
                 android:id="@+id/btn_Check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:text="수표" />
 
             <Button
                 android:id="@+id/btn_Gift"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginLeft="15dp"
                 android:text="상품권" />
 
@@ -81,12 +90,18 @@
                 android:id="@+id/btn_Currency"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginRight="30dp"
                 android:text="외화" />
             <Button
                 android:id="@+id/btn_Else"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginRight="10dp"
                 android:text="기타" />
         </RadioGroup>

@@ -54,15 +54,17 @@ public class EnrollActivity_Other extends AppCompatActivity {
         btn_Enroll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "감사합니다 5/5\n 등록완료", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "감사합니다 4/4\n 등록완료", Toast.LENGTH_SHORT).show();
                 Intent intent = getIntent();
                 Intent intent2 = new Intent(EnrollActivity_Other.this, MainActivity.class);
                 LostObject newObj = new LostObject();
+                newObj.setPasswd(intent.getStringExtra("pw"));
                 newObj.setMainCategory(intent.getStringExtra("mc"));
                 newObj.setSubCategory(intent.getStringExtra("sc"));
                 newObj.setLine(intent.getStringExtra("line"));
                 newObj.setStation(intent.getStringExtra("station"));
                 newObj.setDateTime(intent.getStringExtra("date"));
+                newObj.setPasswd(DBController.passwdTemp);
                 newObj.setStorage(editStorage.getText().toString());
                 newObj.setContents(editMemo.getText().toString());
                 newObj.setImage(choice_img);

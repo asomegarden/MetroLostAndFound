@@ -21,7 +21,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:text="의류군요!"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp"
             android:gravity="center"/>
         <TextView
@@ -35,7 +35,7 @@
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/notice"
             android:text="어떤 종류인가요??"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp"
             android:gravity="center"/>
 
@@ -52,6 +52,9 @@
                 android:id="@+id/btn_Female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginRight="10dp"
                 android:text="여성의류" />
 
@@ -59,6 +62,9 @@
                 android:id="@+id/btn_Male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginRight="10dp"
                 android:text="남성의류" />
 
@@ -66,6 +72,9 @@
                 android:id="@+id/btn_Sports"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginRight="10dp"
                 android:text="스포츠의류" />
 
@@ -73,6 +82,9 @@
                 android:id="@+id/btn_Kid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginRight="10dp"
                 android:text="아동의류" />
 
@@ -90,6 +102,9 @@
                 android:id="@+id/btn_Cap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginRight="15dp"
                 android:text="모자" />
 
@@ -98,12 +113,18 @@
                 android:id="@+id/btn_Shoes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:text="신발" />
 
             <Button
                 android:id="@+id/btn_Else"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginLeft="15dp"
                 android:text="기타" />
 

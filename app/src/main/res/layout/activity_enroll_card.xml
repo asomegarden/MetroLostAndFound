@@ -21,7 +21,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:text="카드군요!"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp"
             android:gravity="center"/>
         <TextView
@@ -35,7 +35,7 @@
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/notice"
             android:text="어떤 종류인가요??"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp"
             android:gravity="center"/>
 
@@ -52,11 +52,17 @@
                 android:id="@+id/btn_Check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginRight="20dp"
                 android:text="신용(체크)카드" />
             <Button
                 android:id="@+id/btn_Metro"
                 android:layout_width="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_height="wrap_content"
                 android:text="교통카드" />
 
@@ -64,6 +70,9 @@
                 android:id="@+id/btn_Else"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginLeft="20dp"
                 android:text="기타" />
 

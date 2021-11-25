@@ -52,6 +52,10 @@
                 android:id="@+id/btn_Book2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+
                 android:layout_marginRight="20dp"
                 android:text="도서" />
 
@@ -59,6 +63,9 @@
                 android:id="@+id/btn_Mag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginLeft="20dp"
                 android:text="잡지" />
 
@@ -79,6 +86,9 @@
                 android:id="@+id/btn_Paper2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginRight="20dp"
                 android:text="서류" />
 
@@ -86,6 +96,9 @@
                 android:id="@+id/btn_Else"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:layout_marginLeft="20dp"
                 android:text="기타" />
 

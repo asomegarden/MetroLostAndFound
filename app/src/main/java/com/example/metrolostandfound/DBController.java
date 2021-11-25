@@ -27,7 +27,14 @@ import retrofit2.http.QueryMap;
 public class DBController {
     public static List<LostObject> objects;
     public static LostObject singleObject;
-    private static boolean loading;
+
+    //패스워드가 막판에 추가돼서 인탠트를 다 수정하기 힘들 것 같아서 여기에 임시저장
+    public static String passwdTemp;
+    
+    //이제 리턴해주는 형식이 아니라 변수에 저장해놓은 후 리프레시 할 때마다 불러오게
+    //동기 처리 문제가 있어서 결국 이렇게 했음
+    //DBController.objects 는 리스트
+    //DBController.singleObject 는 단일 객체
 
     static {
         singleObject = new LostObject();
@@ -151,7 +158,6 @@ public class DBController {
                 if(response.isSuccessful()) {
                     singleObject = new LostObject(response.body());
 
-                    loading = false;
                 }else {
                     Log.d("get 에러", response.message());
                 }
@@ -204,20 +210,20 @@ public class DBController {
 
         RetrofitService service = retrofit.create(RetrofitService.class);
 
-        Call call = service.deletePost(id);
+        Call<Void> call = service.deletePost(id);
 
-        call.enqueue(new Callback() {
+        call.enqueue(new Callback<Void>() {
             @Override
-            public void onResponse(Call call, Response response) {
+            public void onResponse(Call<Void> call, Response<Void> response) {
                 if(!response.isSuccessful()){
-                    Log.d("Post 오류", response.message());
+                    Log.d("삭제 오류", response.message());
                     return;
                 }
             }
 
             @Override
-            public void onFailure(Call call, Throwable t) {
-                Log.d("Post 실패", "이유 : ");
+            public void onFailure(Call<Void> call, Throwable t) {
+                Log.d("삭제 실패", "이유 : ");
                 t.printStackTrace();
             }
         });
@@ -261,7 +267,7 @@ interface RetrofitService {
     Call<LostObject> postItem(@Body LostObject obj);
 
     //삭제 id는 그 데이터 받아오면 getId 메소드로 가져올 수 있음 setId는 그래서 private임 사실 지워도 됐지만 그냥 냅둠
-    @DELETE("posts/{id}")
+    @DELETE("items/{id}")
     Call<Void> deletePost(@Path("id") int id);
 
 }

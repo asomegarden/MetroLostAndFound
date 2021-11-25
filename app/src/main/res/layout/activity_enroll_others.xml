@@ -23,7 +23,7 @@
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="습득물의 사진과 보관장소"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp" />
         <TextView
             android:id="@+id/notice2"
@@ -36,7 +36,7 @@
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/notice"
             android:text="그리고 추가설명을 작성해주세요"
-            android:textColor="@color/black"
+            android:textColor="@color/korailBlue"
             android:textSize="24dp"
             android:gravity="center"/>
         <LinearLayout
@@ -71,10 +71,12 @@
                 android:layout_width="160dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:background="@color/gray"
+                android:background="@drawable/round_background"
+                android:textColor="@color/white"
+                android:textSize="16dp"
                 android:text="사진 선택"
                 android:onClick="onClick"
-                android:textSize="15sp"/>
+                />
 
         </LinearLayout>
 
@@ -121,12 +123,15 @@
             android:padding="10dp"/>
 
         <Button
+            android:id="@+id/btn_Enroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_alignParentBottom="true"
-            android:id="@+id/btn_Enroll"
-            android:text="등록"/>
+            android:background="@drawable/round_background"
+            android:gravity="center"
+            android:text="등록"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
 
 
     </RelativeLayout>
