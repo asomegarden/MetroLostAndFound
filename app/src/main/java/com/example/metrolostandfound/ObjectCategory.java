@@ -12,7 +12,7 @@ public class ObjectCategory {
 
     static{
         mainCategories = Arrays.asList(new String[] {
-                "가방", "귀금속", "도서", "안경", "공구", "스포츠용품", "의류", "자동차", "전자기기"
+                "가방", "귀중품", "도서", "안경", "공구", "스포츠용품", "의류", "자동차", "전자기기"
                 , "지갑", "증명서", "카드", "현금", "휴대폰", "기타용품"
         }); //keySet이 되면 순서가 마구잡이가 돼서 순서를 임의로 고정시키기 위해 따로 리스트로 관리
 
@@ -80,7 +80,7 @@ public class ObjectCategory {
         categories = new HashMap<>();
         
         categories.put("가방", subBag);
-        categories.put("귀금속", subJewel);
+        categories.put("귀중품", subJewel);
         categories.put("도서", subBook);
         categories.put("안경", subGlasses);
         categories.put("공구", subTool);

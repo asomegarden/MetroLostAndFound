@@ -1,102 +1,299 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_background"
-        android:layout_margin="10dp"
-        android:id="@+id/searchLinearLayout">
+        android:id="@+id/layout_result"
+        android:visibility="visible"
+        android:orientation="vertical">
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="검색"
-            android:textSize="30dp"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:layout_alignParentTop="true"/>
+            android:background="@drawable/round_background"
+            android:layout_margin="10dp"
+            android:id="@+id/searchLinearLayout">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/ic_baseline_search_24"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="검색"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_alignParentTop="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_baseline_search_24"
+                android:padding="10dp"
+                android:id="@+id/searchImageView" />
+
+            <ImageView
+                android:id="@+id/refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_refresh_24" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
             android:padding="10dp"
-            android:id="@+id/searchImageView" />
+            android:layout_below="@id/searchLinearLayout">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recycler"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@color/korailBlue"
+                android:drawableTop="@drawable/ic_baseline_home_24"
+                android:text="HOME"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/searchHomeTextView"
+                />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@color/korailBlue"
+                android:drawableTop="@drawable/ic_baseline_add_24"
+                android:text="등록"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/searchAddTextView"
+                />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@color/darkkorailBlue"
+                android:drawableTop="@drawable/ic_baseline_search_24"
+                android:text="찾기"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/searchSearchTextView"
+                />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@color/korailBlue"
+                android:drawableTop="@drawable/ic_baseline_settings_24"
+                android:text="환경설정"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/searchSettingTextView"
+                />
+
+        </LinearLayout>
 
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <RelativeLayout
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:padding="10dp"
-        android:layout_below="@id/searchLinearLayout">
-    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recycler"/>
-    </LinearLayout>
+        android:id="@+id/layout_detail"
+        android:visibility="gone"
+        android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
-        <TextView
-            android:layout_weight="1"
-            android:layout_height="match_parent"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:background="@color/korailBlue"
-            android:drawableTop="@drawable/ic_baseline_home_24"
-            android:text="HOME"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:id="@+id/searchHomeTextView"
-            />
-
-        <TextView
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_background"
+                android:gravity="center"
+                android:text="세부 검색"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="시간:"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/searchDetailTimeTextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:text=" PM 10 : 00 "
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="호선:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/searchLineSpinner"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="역:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/searchStationSpinner"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="대분류:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/searchBigProductSpinner"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="소분류:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/searchSmallProductSpinner"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+
+                </LinearLayout>
+                <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="분실물 이름:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_passwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="빈 칸으로 두면, 모두 검색됩니다."/>
+                </LinearLayout>
+                -->
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:background="@color/korailBlue"
-            android:drawableTop="@drawable/ic_baseline_add_24"
-            android:text="등록"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:id="@+id/searchAddTextView"
-            />
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSearch"
+                android:text="검색"/>
 
-        <TextView
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:background="@color/darkkorailBlue"
-            android:drawableTop="@drawable/ic_baseline_search_24"
-            android:text="찾기"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:id="@+id/searchSearchTextView"
-            />
+        </LinearLayout>
 
-        <TextView
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:background="@color/korailBlue"
-            android:drawableTop="@drawable/ic_baseline_settings_24"
-            android:text="환경설정"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:id="@+id/searchSettingTextView"
-            />
-
-    </LinearLayout>
-
-</RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

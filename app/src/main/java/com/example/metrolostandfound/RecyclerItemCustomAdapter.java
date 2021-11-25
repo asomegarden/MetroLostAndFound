@@ -19,7 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerItemCustomAdapter extends RecyclerView.Adapter<RecyclerItemCustomAdapter.ViewHolder>{
-    private ArrayList<RecyclerItemCustom> mData = null;
+    private List<RecyclerItemCustom> mData = null;
+
 
     //리스트뷰 사용을 위한 어댑터 ListView 보다 RecyclerView 가 더 좋은 거라길래 이거 씀
 
